@@ -12,19 +12,21 @@ public class Crabe : MonoBehaviour
     [SerializeField] float bulleMinTaille, bulleMMaxTaille;
     [SerializeField] float bulleSpeedMin, bulleSpeedMax;
     [SerializeField] float bulleAngleDirection;
-    [SerializeField] float bulleAttaqueCD;
+    [SerializeField] float bulleAttaqueCD, mooveCD, chasseCD;
     [SerializeField] float bulleTempsEntreChaqueBulle;
     [SerializeField] GameObject bulleObject;
 
 
     private bool isBulleAttaque;
-    private float savedTimeBulle, savedTimeBulleAttaque;
+    private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse;
     private int nbBulle;
     // Start is called before the first frame update
     void Start()
     {
         savedTimeBulle = Time.time;
         savedTimeBulleAttaque = Time.time;
+        savedTimeMoove = Time.time;
+        savedTimeChasse = Time.time;
         isBulleAttaque = true;
     }
 
@@ -63,6 +65,17 @@ public class Crabe : MonoBehaviour
     }
     public void Moove()
     {
-        
+        if(Time.time > savedTimeMoove + mooveCD)
+        {
+            savedTimeMoove = Time.time;
+        }
     }
+    public void Chasse()
+    {
+        if(Time.time > savedTimeChasse + mooveCD)
+        {
+            savedTimeChasse = Time.time;
+        }
+    }
+    
 }

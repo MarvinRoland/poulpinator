@@ -20,7 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] float rotationSpeed; // vitesse de rotation du poulpe
     Vector3 v3Force;
     
-
+    [SerializeField] Camera cameraPlayer;
+    [SerializeField] float cameraDistance, cameraHauteur;
+ 
+ 
+     
+ 
 
 
     
@@ -33,7 +38,8 @@ public class Player : MonoBehaviour
     void Start()
     {        
         rb = this.gameObject.GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0,0,0),ForceMode.VelocityChange);
+        
+
     }
 
     // Update is called once per frame
@@ -42,6 +48,12 @@ public class Player : MonoBehaviour
         Rotation();
         Propulsion();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
+        cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
+        
+        
+        rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
+        
+        
     }
     void FixedUpdate()
     {
@@ -92,5 +104,15 @@ public class Player : MonoBehaviour
     public void Die()
     {
 
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.tag == "Bouffe passive")
+        {
+            Destroy(other.gameObject);
+            transform.localScale = transform.localScale * 1.1f;
+            Debug.Log("hit food");
+        }
+        Debug.Log("hit");
     }
 }
