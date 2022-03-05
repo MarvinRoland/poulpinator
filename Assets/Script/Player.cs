@@ -20,7 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] float rotationSpeed; // vitesse de rotation du poulpe
     Vector3 v3Force;
     
-
+    [SerializeField] Camera cameraPlayer;
+    [SerializeField] float cameraDistance, cameraHauteur;
+ 
+ 
+     
+ 
 
 
     
@@ -34,6 +39,7 @@ public class Player : MonoBehaviour
     {        
         rb = this.gameObject.GetComponent<Rigidbody>();
         
+
     }
 
     // Update is called once per frame
@@ -41,11 +47,13 @@ public class Player : MonoBehaviour
     {
         Rotation();
         Propulsion();
-        if (rb.velocity.y < -1)
-        {
-            //rb.velocity = rb.velocity.normalized;
-        }
-        Debug.Log(rb.velocity);
+        rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
+        cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
+        
+        
+        rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
+        
+        
     }
     void FixedUpdate()
     {
@@ -59,14 +67,12 @@ public class Player : MonoBehaviour
             v3Force = playerPropulsionForce * transform.up;
             Debug.Log("propulse");
             rb.AddForce(v3Force,ForceMode.Impulse);
-            //rb.AddForce(0, playerPropulsionForce, 0, ForceMode.Impulse);
-            //rb.AddForce(0, -playerDeceleration, 0, ForceMode.Impulse);
+            
         }
         else
         {
-            v3Force = playerDeceleration * -transform.up;
-            Debug.Log("propulse");
-            rb.AddForce(v3Force,ForceMode.Acceleration);
+            
+            rb.velocity -= playerDeceleration*rb.velocity* Time.deltaTime;
         }
     }
     public void Rotation()
@@ -80,8 +86,9 @@ public class Player : MonoBehaviour
                 z = 0.0f;
                 
             }
-            transform.localRotation = Quaternion.Euler(0, 0, z);
+            
         }
+        transform.localRotation = Quaternion.Euler(0, 0, z);
     }
     public void JetDancre()
     {
@@ -97,5 +104,15 @@ public class Player : MonoBehaviour
     public void Die()
     {
 
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.tag == "Bouffe passive")
+        {
+            Destroy(other.gameObject);
+            transform.localScale = transform.localScale * 1.1f;
+            Debug.Log("hit food");
+        }
+        Debug.Log("hit");
     }
 }
