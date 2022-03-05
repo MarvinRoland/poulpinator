@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {        
         rb = this.gameObject.GetComponent<Rigidbody>();
-        
+        rb.AddForce(new Vector3(0,0,0),ForceMode.VelocityChange);
     }
 
     // Update is called once per frame
@@ -41,11 +41,7 @@ public class Player : MonoBehaviour
     {
         Rotation();
         Propulsion();
-        if (rb.velocity.y < -1)
-        {
-            //rb.velocity = rb.velocity.normalized;
-        }
-        Debug.Log(rb.velocity);
+        rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
     }
     void FixedUpdate()
     {
@@ -59,14 +55,12 @@ public class Player : MonoBehaviour
             v3Force = playerPropulsionForce * transform.up;
             Debug.Log("propulse");
             rb.AddForce(v3Force,ForceMode.Impulse);
-            //rb.AddForce(0, playerPropulsionForce, 0, ForceMode.Impulse);
-            //rb.AddForce(0, -playerDeceleration, 0, ForceMode.Impulse);
+            
         }
         else
         {
-            v3Force = playerDeceleration * -transform.up;
-            Debug.Log("propulse");
-            rb.AddForce(v3Force,ForceMode.Acceleration);
+            
+            rb.velocity -= playerDeceleration*rb.velocity* Time.deltaTime;
         }
     }
     public void Rotation()
@@ -80,8 +74,9 @@ public class Player : MonoBehaviour
                 z = 0.0f;
                 
             }
-            transform.localRotation = Quaternion.Euler(0, 0, z);
+            
         }
+        transform.localRotation = Quaternion.Euler(0, 0, z);
     }
     public void JetDancre()
     {
