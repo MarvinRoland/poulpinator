@@ -8,45 +8,54 @@ using UnityEngine;
 public class Crabe : MonoBehaviour
 {
     [SerializeField] float crabeSpeed; 
+    [SerializeField] float propulsionForce;
     [SerializeField] int bulleNombreParAttaque;
     [SerializeField] float bulleMinTaille, bulleMMaxTaille;
     [SerializeField] float bulleSpeedMin, bulleSpeedMax;
     [SerializeField] float bulleAngleDirection;
-    [SerializeField] float bulleAttaqueCD, mooveCD, chasseCD;
+    [SerializeField] float bulleAttaqueCD, mooveCD, chasseCD, jumpCD;
     [SerializeField] float bulleTempsEntreChaqueBulle;
     [SerializeField] GameObject bulleObject;
 
 
-    private bool isBulleAttaque, isMoove, isChasse;
-    private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse;
+    Vector3 v3Force;
+    
+    Rigidbody rb;
+    private bool isBulleAttaque, isMoove, isChasse, isJump, isKnoc;
+    private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse, savedTimeJump, savedTimeKnoc;
     private int nbBulle;
     private Vector3 targetPosition, goToPosition;
     private float targetX, targetY, targetZ;
     // Start is called before the first frame update
     void Start()
     {
+        rb = this.GetComponent<Rigidbody>();
+        savedTimeKnoc = Time.time;
         savedTimeBulle = Time.time;
         savedTimeBulleAttaque = Time.time;
         savedTimeMoove = Time.time;
         savedTimeChasse = Time.time;
+        savedTimeJump = Time.time;
         isBulleAttaque = true;
         isChasse = true;
     }
 
     // Update is called once per frame
     async void Update()
-    {        
+    {      
+        Jump();          
         AttaqueBulle();
         SetBulleAttaqueCD();
         Chasse();
         Moove();
-        
+        Knoc();
+        rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
     }
     public void AttaqueBulle()
     {
         if(Time.time > savedTimeBulle + bulleTempsEntreChaqueBulle + Random.Range(-0.1f,0.1f) && isBulleAttaque)
         {
-            Vector3 startBullePosition = new Vector3(this.transform.position.x+Random.Range(-1,1), this.transform.position.y, this.transform.position.z);
+            Vector3 startBullePosition = new Vector3(this.transform.position.x+Random.Range(-1,1), this.transform.position.y+5, this.transform.position.z);
             GameObject bulle = Instantiate(bulleObject,startBullePosition,Quaternion.identity);
             bulle.GetComponent<Bulle>().speed = Random.Range(bulleSpeedMin,bulleSpeedMax);
             bulle.transform.localRotation = Quaternion.Euler(0,0,Random.Range(-bulleAngleDirection,bulleAngleDirection));
@@ -101,5 +110,51 @@ public class Crabe : MonoBehaviour
             //Debug.Log("is in chasse" + "**" + targetPosition + "**");
         }
     }
-    
+    public void Jump()
+    {
+        if (Time.time > savedTimeJump + jumpCD && !isKnoc)
+        {
+            isJump = true;
+        }
+        if(isJump)
+        {
+            isMoove = false;
+            isChasse = false;
+            isBulleAttaque = false;
+
+            v3Force = propulsionForce * transform.up;
+            Debug.Log("propulse");
+            rb.AddForce(v3Force,ForceMode.Impulse);
+            isJump = false;
+            savedTimeJump = Time.time;
+            isChasse = true;
+        }
+        
+    }
+    public void Knoc()
+    {
+        if (isKnoc)
+        {
+            isMoove = false;
+            isChasse = false;
+            isBulleAttaque = false;
+            isJump = false;
+            if (savedTimeKnoc + 20 < Time.time)
+            {
+                isKnoc = false;
+                isChasse = true;
+                savedTimeJump = Time.time;
+                Debug.Log(isKnoc + "knock");
+            }            
+        }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "WallStun")
+        {
+            isKnoc = true;
+            savedTimeKnoc = Time.time;
+        }
+    }
 }
