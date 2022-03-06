@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float ancrePuissanceDePropulsion; // vitesse de depart du jet d'ancre 
     [SerializeField] float ancrePuissanceDecroissement; // vitesse a la quel l'ancre passe de x vitesse a zero
     [SerializeField] bool ancreIsToxic; // si TRUE l'ancre serra toxic et ferra des degats
-    [SerializeField] float ancreDegatsDirect, ancreDegatsDegatsParSeconde; // les degats que l'ancre infligera a l'impacte
+    [SerializeField] float ancreDegatsDirect, ancreDegatsDegatsParSeconde, ancreSpeed; // les degats que l'ancre infligera a l'impacte
     [SerializeField] float ancreDureeEmpoisonement; // durée de l'empoisonement
     [SerializeField] float ancreCD; // temps entre chaque jet d'ancre
     [SerializeField] float ancreReserve; // reserve d'ancre
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     
     [SerializeField] Camera cameraPlayer;
     [SerializeField] public float cameraDistance, cameraHauteur;
+    [SerializeField] GameObject ancreObject;
     bool isCameraGoFar = false;
     bool isGoBig = false;
     public float disCam;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
         Propulsion();
         CameraSetPosition();
         PlayerSetScale();
+        JetDancre();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
         rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
@@ -94,10 +96,12 @@ public class Player : MonoBehaviour
     }
     public void JetDancre()
     {
-        if (Input.GetButtonDown("Fire"))
+        if (Input.GetButtonDown("Fire1"))
         {
-
+            GameObject ancre = Instantiate(ancreObject, transform.position,Quaternion.identity);
+            ancre.transform.position = Vector3.Lerp(ancre.transform.position, ancre.transform.position-ancre.transform.up*Time.deltaTime*ancreSpeed, 1);
         }
+Debug.Log("Fire1");
     }
     public void DragTentacle()
     {
@@ -135,4 +139,5 @@ public class Player : MonoBehaviour
         }
         
     }
+   
 }
