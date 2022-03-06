@@ -1244,6 +1244,9 @@ MonoBehaviour:
   ancreRegenerationActive: 0
   ancreReserveAjoutTime: 0
   rotationSpeed: 300
+  cameraPlayer: {fileID: 963194227}
+  cameraDistance: 5
+  cameraHauteur: 5
 --- !u!1 &960252415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1543,8 @@ MonoBehaviour:
   bulleSpeedMax: 15
   bulleAngleDirection: 10
   bulleAttaqueCD: 5
+  mooveCD: 0
+  chasseCD: 0
   bulleTempsEntreChaqueBulle: 0.1
   bulleObject: {fileID: 1648083232}
 --- !u!1 &1063421824
