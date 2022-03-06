@@ -17,9 +17,11 @@ public class Crabe : MonoBehaviour
     [SerializeField] GameObject bulleObject;
 
 
-    private bool isBulleAttaque;
+    private bool isBulleAttaque, isMoove, isChasse;
     private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse;
     private int nbBulle;
+    private Vector3 targetPosition, goToPosition;
+    private float targetX, targetY, targetZ;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +30,16 @@ public class Crabe : MonoBehaviour
         savedTimeMoove = Time.time;
         savedTimeChasse = Time.time;
         isBulleAttaque = true;
+        isChasse = true;
     }
 
     // Update is called once per frame
-    void Update()
+    async void Update()
     {        
         AttaqueBulle();
         SetBulleAttaqueCD();
+        Chasse();
+        Moove();
         
     }
     public void AttaqueBulle()
@@ -45,6 +50,8 @@ public class Crabe : MonoBehaviour
             GameObject bulle = Instantiate(bulleObject,startBullePosition,Quaternion.identity);
             bulle.GetComponent<Bulle>().speed = Random.Range(bulleSpeedMin,bulleSpeedMax);
             bulle.transform.localRotation = Quaternion.Euler(0,0,Random.Range(-bulleAngleDirection,bulleAngleDirection));
+            float randsize = Random.Range(bulleMinTaille, bulleMMaxTaille);
+            bulle.transform.localScale = new Vector3(bulle.transform.localScale.x * randsize,bulle.transform.localScale.y * randsize, bulle.transform.localScale.z * randsize);//Random.Range(bulleMinTaille, bulleMMaxTaille);
             nbBulle += 1;
             savedTimeBulle = Time.time;
             if(nbBulle >= bulleNombreParAttaque)
@@ -65,16 +72,33 @@ public class Crabe : MonoBehaviour
     }
     public void Moove()
     {
-        if(Time.time > savedTimeMoove + mooveCD)
+        if(Time.time > savedTimeMoove + mooveCD && isMoove == true)
         {
+            goToPosition = new Vector3(targetX,transform.position.y,transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, goToPosition, Time.deltaTime*crabeSpeed);
             savedTimeMoove = Time.time;
+            //Debug.Log("is in moove" + "**" + targetPosition + "**" + goToPosition);
+            if (Time.time > savedTimeChasse + chasseCD && isChasse == false)
+            {
+                isMoove = false;
+                savedTimeMoove = Time.time;  
+                isChasse = true   ; 
+                Debug.Log(isChasse);          
+            }
         }
     }
     public void Chasse()
     {
-        if(Time.time > savedTimeChasse + mooveCD)
+        if(Time.time > savedTimeChasse + chasseCD && isChasse == true)
         {
+            targetPosition = GameObject.Find("Player Boddy").transform.position;
+            targetX = targetPosition.x;
+            targetY = targetPosition.y;
+            targetZ = targetPosition.z;
+            isMoove = true;
+            isChasse = false;            
             savedTimeChasse = Time.time;
+            //Debug.Log("is in chasse" + "**" + targetPosition + "**");
         }
     }
     
