@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float playerPropulsionForce; // determine la la force de propulsion du poulpe (en gros la distance jusqu'ou ca le propulsera apres un input)
-    [SerializeField] float playerDeceleration; // la vitesse a la quel le poulpe passe de X vitesse a zero quand on ne se propulse pas
-    [SerializeField] float ancrePropulsionDistance; // la distance max jusqu'ou l'ancre serra propulsée
+    [SerializeField] float playerDeceleration; // la vitesse a la quel le poulpe passe de X vitesse a zero quand on ne se propulse pas    
     [SerializeField] float ancrePuissanceDePropulsion; // vitesse de depart du jet d'ancre 
+    [SerializeField] float ancreTempsExiste; // le temps que la tache restera
     [SerializeField] float ancrePuissanceDecroissement; // vitesse a la quel l'ancre passe de x vitesse a zero
     [SerializeField] bool ancreIsToxic; // si TRUE l'ancre serra toxic et ferra des degats
     [SerializeField] float ancreDegatsDirect, ancreDegatsDegatsParSeconde, ancreSpeed; // les degats que l'ancre infligera a l'impacte
@@ -18,16 +18,18 @@ public class Player : MonoBehaviour
     [SerializeField] float ancreRegenerationActive; // ancre ajouté apres avoir mangé une proie
     [SerializeField] float ancreReserveAjoutTime; // temps entre chaque ajout naturel d'ancre dans la reserve
     [SerializeField] float rotationSpeed; // vitesse de rotation du poulpe
-    Vector3 v3Force;
+    
     
     [SerializeField] Camera cameraPlayer;
     [SerializeField] public float cameraDistance, cameraHauteur;
     [SerializeField] GameObject ancreObject;
     bool isCameraGoFar = false;
     bool isGoBig = false;
+    bool canShoot = false;
     public float disCam;
     public Vector3 sizeUp;
- 
+    float savedTimeShoot, savedTimeSpriteAncre, shootCD, spriteCD;
+    int nbAncre;
  
      
  
@@ -36,13 +38,17 @@ public class Player : MonoBehaviour
     
     private float z;
     private Rigidbody rb;
-    
+    Vector3 v3Force;
     
 
     // Start is called before the first frame update
     void Start()
     {        
         rb = this.gameObject.GetComponent<Rigidbody>();
+        savedTimeShoot = Time.time;
+        savedTimeSpriteAncre = Time.time;
+        nbAncre = 0;
+        spriteCD = 0.02f;
     }
 
     // Update is called once per frame
@@ -98,10 +104,29 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject ancre = Instantiate(ancreObject, transform.position,Quaternion.identity);
-            ancre.transform.position = Vector3.Lerp(ancre.transform.position, ancre.transform.position-ancre.transform.up*Time.deltaTime*ancreSpeed, 1);
+            canShoot = true;
+            
+            //ancre.transform.position = Vector3.Lerp(ancre.transform.position, ancre.transform.position-ancre.transform.up*Time.deltaTime*ancreSpeed, 1);
         }
-Debug.Log("Fire1");
+        if (canShoot && nbAncre < 5 && Time.time > spriteCD + savedTimeSpriteAncre)
+        {
+            Quaternion myrot = this.transform.rotation;
+            myrot.z += Random.Range(-0.1f,0.1f);
+            GameObject ancre = Instantiate(ancreObject, transform.position, myrot);
+            ancre.GetComponent<Ancre>().propulsionForce = ancrePuissanceDePropulsion;
+            ancre.GetComponent<Ancre>().isToxic = ancreIsToxic;
+            ancre.transform.localScale *= Random.Range(0.1f,0.4f);
+            ancre.GetComponent<Ancre>().timeExist = ancreTempsExiste;
+            ancre.GetComponent<Ancre>().decraseSpeed = ancrePuissanceDecroissement;
+            nbAncre += 1;
+            savedTimeSpriteAncre = Time.time;
+        }
+        if (canShoot && nbAncre >= 5)
+        {
+            canShoot = false;
+            nbAncre = 0;
+        }
+
     }
     public void DragTentacle()
     {
