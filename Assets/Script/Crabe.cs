@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Crabe : MonoBehaviour
 {
+    [SerializeField] bool estActif;
+    [SerializeField] int crabePointDeVie;
     [SerializeField] float crabeSpeed; 
     [SerializeField] float propulsionForce;
     [SerializeField] int bulleNombreParAttaque;
@@ -16,7 +18,7 @@ public class Crabe : MonoBehaviour
     [SerializeField] float bulleAttaqueCD, mooveCD, chasseCD, jumpCD;
     [SerializeField] float bulleTempsEntreChaqueBulle;
     [SerializeField] GameObject bulleObject;
-
+    [SerializeField] float stunTimer;
 
     Vector3 v3Force;
     
@@ -43,13 +45,21 @@ public class Crabe : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {      
-        Jump();          
-        AttaqueBulle();
-        SetBulleAttaqueCD();
-        Chasse();
-        Moove();
-        Knoc();
-        rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
+        if (estActif)
+        {
+            Jump();          
+            AttaqueBulle();
+            SetBulleAttaqueCD();
+            Chasse();
+            Moove();
+            Knoc();
+            rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
+        }
+        if (crabePointDeVie <= 0)
+        {
+            estActif = false;
+        }
+        
     }
     public void AttaqueBulle()
     {
@@ -77,6 +87,7 @@ public class Crabe : MonoBehaviour
             nbBulle = 0;
             isBulleAttaque = true;
             savedTimeBulleAttaque = Time.time;
+
         }
     }
     public void Moove()
@@ -139,7 +150,7 @@ public class Crabe : MonoBehaviour
             isChasse = false;
             isBulleAttaque = false;
             isJump = false;
-            if (savedTimeKnoc + 20 < Time.time)
+            if (savedTimeKnoc + stunTimer < Time.time)
             {
                 isKnoc = false;
                 isChasse = true;
@@ -155,6 +166,7 @@ public class Crabe : MonoBehaviour
         {
             isKnoc = true;
             savedTimeKnoc = Time.time;
+            crabePointDeVie -= 1;
         }
     }
 }

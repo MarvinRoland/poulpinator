@@ -2285,8 +2285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e36ed22ed193074ea70e27b3e69defd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  estActif: 1
+  crabePointDeVie: 3
   crabeSpeed: 10
-  propulsionForce: 20
+  propulsionForce: 30
   bulleNombreParAttaque: 20
   bulleMinTaille: 0.7
   bulleMMaxTaille: 2
@@ -2299,6 +2301,7 @@ MonoBehaviour:
   jumpCD: 17
   bulleTempsEntreChaqueBulle: 0.1
   bulleObject: {fileID: 1648083232}
+  stunTimer: 15
 --- !u!54 &993859358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3722,8 +3725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722249372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.76, z: -14.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 19.9, z: -21.59}
+  m_LocalScale: {x: 100, y: 3, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
