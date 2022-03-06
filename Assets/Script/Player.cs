@@ -21,7 +21,11 @@ public class Player : MonoBehaviour
     Vector3 v3Force;
     
     [SerializeField] Camera cameraPlayer;
-    [SerializeField] float cameraDistance, cameraHauteur;
+    [SerializeField] public float cameraDistance, cameraHauteur;
+    bool isCameraGoFar = false;
+    bool isGoBig = false;
+    public float disCam;
+    public Vector3 sizeUp;
  
  
      
@@ -38,8 +42,6 @@ public class Player : MonoBehaviour
     void Start()
     {        
         rb = this.gameObject.GetComponent<Rigidbody>();
-        
-
     }
 
     // Update is called once per frame
@@ -47,10 +49,10 @@ public class Player : MonoBehaviour
     {
         Rotation();
         Propulsion();
+        CameraSetPosition();
+        PlayerSetScale();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
-        
-        
         rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
         
         
@@ -110,9 +112,27 @@ public class Player : MonoBehaviour
         if (other.tag == "Bouffe passive")
         {
             Destroy(other.gameObject);
-            transform.localScale = transform.localScale * 1.1f;
+            isCameraGoFar = true;
+            isGoBig = true;
+            sizeUp = transform.localScale * 1.1f;
+            disCam = cameraDistance * 1.1f;
             Debug.Log("hit food");
         }
         Debug.Log("hit");
+    }
+    public void CameraSetPosition()
+    {
+        if (isCameraGoFar)
+        {
+            cameraDistance = Mathf.Lerp(cameraDistance, disCam*1.1f, 1*Time.deltaTime);
+        }
+    }
+    public void PlayerSetScale()
+    {
+        if (isGoBig)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, sizeUp, 1*Time.deltaTime);
+        }
+        
     }
 }
