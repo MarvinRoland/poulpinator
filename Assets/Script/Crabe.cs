@@ -53,13 +53,13 @@ public class Crabe : MonoBehaviour
             Chasse();
             Moove();
             Knoc();
-            rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
+            
         }
         if (crabePointDeVie <= 0)
         {
             estActif = false;
         }
-        
+        rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
     }
     public void AttaqueBulle()
     {
