@@ -14,12 +14,15 @@ public class Player : MonoBehaviour
     [SerializeField] float ancreDureeEmpoisonement; // durée de l'empoisonement
     [SerializeField] float ancreCD; // temps entre chaque jet d'ancre
     [SerializeField] float ancreReserve; // reserve d'ancre
+    [SerializeField] float ancreReserveMax;
+    [SerializeField] float ancreConsume;  // ancre a chaque tir
     [SerializeField] float ancreRegenerationPassive; // ancre ajouté tout les x seconde sans manger de proie
     [SerializeField] float ancreRegenerationActive; // ancre ajouté apres avoir mangé une proie
     [SerializeField] float ancreReserveAjoutTime; // temps entre chaque ajout naturel d'ancre dans la reserve
     [SerializeField] float rotationSpeed; // vitesse de rotation du poulpe
-    
-    
+    [SerializeField] float expPhysique, expToxic, expSkill; // exp phys, exp toxic, exp avant prochain lvl
+    [SerializeField] int forcePhysique, forceToxic; // skill physique et toxic pour debloquer les skill
+    [SerializeField] int lvlSkill1, lvlSkill2, lvlSkill3, lvlSkill4, lvlSkill5;
     [SerializeField] Camera cameraPlayer;
     [SerializeField] public float cameraDistance, cameraHauteur;
     [SerializeField] GameObject ancreObject;
@@ -29,8 +32,8 @@ public class Player : MonoBehaviour
     public float disCam;
     public Vector3 sizeUp;
     float savedTimeShoot, savedTimeSpriteAncre, shootCD, spriteCD;
-    int nbAncre;
- 
+    int nbAncre, nbAncreToSpew;
+    bool gameOver;
      
  
 
@@ -49,6 +52,8 @@ public class Player : MonoBehaviour
         savedTimeSpriteAncre = Time.time;
         nbAncre = 0;
         spriteCD = 0.02f;
+        gameOver = true;
+        nbAncreToSpew = 5;
     }
 
     // Update is called once per frame
@@ -59,6 +64,8 @@ public class Player : MonoBehaviour
         CameraSetPosition();
         PlayerSetScale();
         JetDancre();
+        SetPlayerAncre();
+
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
         rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
@@ -69,7 +76,18 @@ public class Player : MonoBehaviour
     {
 
     }
-
+    public void SetPlayerAncre()
+    {
+        if (ancreReserve < ancreReserveMax)
+        {
+            ancreReserve += ancreRegenerationPassive * Time.deltaTime * ancreReserveAjoutTime;
+        }
+        if (ancreReserve > ancreReserveMax)
+        {
+            ancreReserve = ancreReserveMax;
+        }
+        Debug.Log(ancreReserve + "ancre");
+    }
     public void Propulsion()
     {
         if (Input.GetButtonDown("Jump"))
@@ -102,13 +120,13 @@ public class Player : MonoBehaviour
     }
     public void JetDancre()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&& ancreReserve > ancreConsume)
         {
             canShoot = true;
-            
+            ancreReserve -= ancreConsume;
             //ancre.transform.position = Vector3.Lerp(ancre.transform.position, ancre.transform.position-ancre.transform.up*Time.deltaTime*ancreSpeed, 1);
         }
-        if (canShoot && nbAncre < 5 && Time.time > spriteCD + savedTimeSpriteAncre)
+        if (canShoot && nbAncre < nbAncreToSpew && Time.time > spriteCD + savedTimeSpriteAncre )
         {
             Quaternion myrot = this.transform.rotation;
             myrot.z += Random.Range(-0.1f,0.1f);
@@ -119,6 +137,7 @@ public class Player : MonoBehaviour
             ancre.GetComponent<Ancre>().timeExist = ancreTempsExiste;
             ancre.GetComponent<Ancre>().decraseSpeed = ancrePuissanceDecroissement;
             nbAncre += 1;
+            
             savedTimeSpriteAncre = Time.time;
         }
         if (canShoot && nbAncre >= 5)
@@ -134,7 +153,9 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
-
+        //play animation mort
+        // gameover is on
+        // retourne au checkpoint
     }
     private void OnTriggerEnter(Collider other) 
     {
@@ -143,9 +164,19 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             isCameraGoFar = true;
             isGoBig = true;
-            sizeUp = transform.localScale * 1.1f;
-            disCam = cameraDistance * 1.1f;
-            Debug.Log("hit food");
+            sizeUp = transform.localScale += new Vector3(0.1f,0.1f,0.1f);
+            disCam = cameraDistance += 0.1f;
+            if(other.GetComponent<Bouffe>().isToxicFood)
+            {
+                expPhysique -= 10;
+                expToxic += 25; 
+            }
+            else
+            {
+                expPhysique += 25;
+                expToxic -= 10;
+            }
+            
         }
         Debug.Log("hit");
     }
@@ -164,5 +195,29 @@ public class Player : MonoBehaviour
         }
         
     }
-   
+    public void PlayerUpgrade()
+    {
+        if (expPhysique > expSkill)
+        {
+            //augment degat physique
+            //skill pointes
+            //propulsion plus puissante
+            // armure
+            // devient plus gros
+
+            expSkill += 100;
+            forcePhysique += 1;
+        }
+        if (expToxic > expSkill)
+        {
+            //degats andre
+            // nb andre
+            // ancre toxic
+            //reserve dancre
+            //ancre autour
+            //devien toxic au touché
+            expToxic += 100;
+            forceToxic +=1;
+        }
+    }
 }
