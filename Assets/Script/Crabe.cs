@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Crabe : MonoBehaviour
 {
-    [SerializeField] bool estActif;
+    [SerializeField] public bool estActif;
     [SerializeField] int crabePointDeVie;
     [SerializeField] float crabeSpeed; 
     [SerializeField] float propulsionForce;
@@ -23,7 +23,8 @@ public class Crabe : MonoBehaviour
     Vector3 v3Force;
     
     Rigidbody rb;
-    private bool isBulleAttaque, isMoove, isChasse, isJump, isKnoc;
+    private bool isBulleAttaque, isMoove, isChasse, isJump;
+    public bool isKnoc = false;
     private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse, savedTimeJump, savedTimeKnoc;
     private int nbBulle;
     private Vector3 targetPosition, goToPosition;

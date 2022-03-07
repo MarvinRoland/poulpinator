@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float playerPropulsionForce; // determine la la force de propulsion du poulpe (en gros la distance jusqu'ou ca le propulsera apres un input)
     [SerializeField] float playerDeceleration; // la vitesse a la quel le poulpe passe de X vitesse a zero quand on ne se propulse pas    
+    [SerializeField] int playerDamage;    
+    [SerializeField] float spikeCD, attackCD;    
     [SerializeField] float ancrePuissanceDePropulsion; // vitesse de depart du jet d'ancre 
     [SerializeField] float ancreTempsExiste; // le temps que la tache restera
     [SerializeField] float ancrePuissanceDecroissement; // vitesse a la quel l'ancre passe de x vitesse a zero
@@ -27,17 +29,20 @@ public class Player : MonoBehaviour
     [SerializeField] Camera cameraPlayer;
     [SerializeField] public float cameraDistance, cameraHauteur;
     [SerializeField] GameObject ancreObject;
+    [SerializeField] GameObject tentacle;
+    bool isDead = false;
     bool isCameraGoFar = false;
+    bool isSpike = false;
     bool isGoBig = false;
     bool canShoot = false;
     public float disCam;
     public Vector3 sizeUp;
-    float savedTimeShoot, savedTimeSpriteAncre, shootCD, spriteCD;
+    float savedTimeShoot, savedTimeSpriteAncre, savedTimeSpikeAttaque, savedTimeAttack, shootCD, spriteCD;
     int nbAncre, nbAncreToSpew;
-    bool gameOver;
+    bool gameOver = false;
      
     float randZMin,randZMax;
-
+    Vector3 mousePosition;
 
     
     private float z;
@@ -53,6 +58,7 @@ public class Player : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody>();
         savedTimeShoot = Time.time;
         savedTimeSpriteAncre = Time.time;
+        savedTimeSpikeAttaque = Time.time;
         nbAncre = 0;
         spriteCD = 0.02f;
         gameOver = true;
@@ -62,19 +68,25 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rotation();
-        Propulsion();
-        CameraSetPosition();
-        PlayerSetScale();
-        JetDancre();
-        SetPlayerAncre();
-        FixNegatifExp();
+        mousePosition = Input.mousePosition;
+        if (!isDead)
+        {
+            Rotation();
+            Propulsion();
+            CameraSetPosition();
+            PlayerSetScale();
+            JetDancre();
+            SetPlayerAncre();
+            FixNegatifExp();
+        }
+        if (isDead)
+        {
+            Die();
+        }
+        
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
-        rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
-        
-        
-        
+        rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);  
     }
     void FixedUpdate()
     {
@@ -135,7 +147,7 @@ public class Player : MonoBehaviour
     }
     public void JetDancre()
     {
-        if (Input.GetButtonDown("Fire1")&& ancreReserve > ancreConsume)
+        if (Input.GetButtonDown("Ancre")&& ancreReserve > ancreConsume)
         {
             canShoot = true;
             ancreReserve -= ancreConsume;
@@ -171,6 +183,9 @@ public class Player : MonoBehaviour
         //play animation mort
         // gameover is on
         // retourne au checkpoint
+        
+        
+        
     }
     private void OnTriggerEnter(Collider other) 
     {
@@ -193,6 +208,30 @@ public class Player : MonoBehaviour
             }
             
         }
+        if(other.tag == "Enemy" && other.GetComponent<Enemy>().isPredateur)
+        {
+            if(isSpike)
+            {
+                other.GetComponent<Enemy>().pointDeVie -= playerDamage;
+            }            
+            else if (!isSpike  && !other.GetComponent<Enemy>().isKnoc)
+            {
+                isDead = true;
+            }
+        }
+        if(other.tag == "Crabe" && other.GetComponent<Crabe>().estActif)
+        {
+            if(!other.GetComponent<Crabe>().isKnoc)
+            {
+                isDead = true;
+            }            
+            else
+            {
+               
+            }
+        }
+
+
         Debug.Log("hit");
     }
     public void CameraSetPosition()
@@ -235,7 +274,7 @@ public class Player : MonoBehaviour
             }
             if (forcePhysique == 2)
             {
-                //physique player damage ++
+                playerDamage = 5;
             }
             if (forcePhysique == 3)
             {
@@ -256,6 +295,7 @@ public class Player : MonoBehaviour
             {
                 ancreReserveMax += 50;
                 ancreReserve = ancreReserveMax;
+                //fouet degat poison
             }
             if (forceToxic == 2)
             {
@@ -266,9 +306,32 @@ public class Player : MonoBehaviour
             }
             if (forceToxic == 3)
             {
-                // pointes isactive
+                //
             }
         }
         
+    }
+    public void TentacleAttaque()
+    {
+        if (Input.GetButtonDown("Ancre"))
+        {
+            Quaternion myrot = this.transform.rotation;
+            myrot.z += 180;
+            GameObject _tentacle = Instantiate(tentacle,transform.position + transform.right*Time.deltaTime * 1.0f,myrot);
+            //_tentacle.transform.localScale += Vector3.Distance(transform.position, mousePosition);
+        }
+        
+    }
+    public void SpikeAttaque()
+    {
+        if(forcePhysique >= 3 && Time.time > savedTimeSpikeAttaque + spikeCD)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                isSpike = true;
+                //joue animationspike
+            }
+            
+        }
     }
 }

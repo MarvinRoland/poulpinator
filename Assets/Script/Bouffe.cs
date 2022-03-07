@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bouffe : MonoBehaviour
 {
-    public bool isToxicFood;
+    public bool isToxicFood = false;
     public float speed, propulsionForce;
     float z;
     float rotationSpeed = 100;
@@ -15,7 +15,7 @@ public class Bouffe : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        isToxicFood = true;
+        
         //Debug.Log("propulse");
         
     }
