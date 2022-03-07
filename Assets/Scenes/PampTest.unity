@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &73550563
@@ -795,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &151378922
@@ -1100,6 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &189177499
@@ -1241,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &241584399
@@ -1382,6 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &259502192
@@ -1479,6 +1484,137 @@ Transform:
   m_Father: {fileID: 1868038711}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &266023665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 266023671}
+  - component: {fileID: 266023670}
+  - component: {fileID: 266023669}
+  - component: {fileID: 266023668}
+  - component: {fileID: 266023667}
+  - component: {fileID: 266023666}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &266023666
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 56
+  m_CollisionDetection: 0
+--- !u!114 &266023667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792c0a2eb9da5df4a84a2d1d21d93d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propulsionForce: 0
+  deceleration: 0
+  isKnoc: 0
+  pointDeVie: 5
+  speed: 5
+  isPredateur: 1
+--- !u!65 &266023668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &266023669
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &266023670
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &266023671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266023665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1403.92, y: 65.1, z: -30.43}
+  m_LocalScale: {x: 10, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &269568752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1644,7 @@ Transform:
   m_Children:
   - {fileID: 831502695}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &285435948
 PrefabInstance:
@@ -1818,6 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &330412808
@@ -2497,6 +2634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &487473912
@@ -3073,6 +3211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &615326410
@@ -3166,7 +3305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &626469867
 GameObject:
@@ -3593,6 +3732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &698634336
@@ -4079,6 +4219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &766069959
@@ -4289,6 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &774029987 stripped
@@ -4604,6 +4746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPropulsionForce: 3
   playerDeceleration: 0.5
+  playerDamage: 0
+  spikeCD: 0
+  attackCD: 0
   ancrePuissanceDePropulsion: 10
   ancreTempsExiste: 5
   ancrePuissanceDecroissement: 1
@@ -4620,10 +4765,23 @@ MonoBehaviour:
   ancreRegenerationActive: 0
   ancreReserveAjoutTime: 1
   rotationSpeed: 300
+  expPhysique: 0
+  expToxic: 0
+  expSkill: 0
+  expToAdd: 0
+  expToRemove: 0
+  forcePhysique: 0
+  forceToxic: 0
+  lvlSkill1: 0
+  lvlSkill2: 0
+  lvlSkill3: 0
+  lvlSkill4: 0
+  lvlSkill5: 0
   cameraPlayer: {fileID: 963194227}
   cameraDistance: 5
   cameraHauteur: 5
   ancreObject: {fileID: 3878242136021434201, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}
+  tentacle: {fileID: 0}
   disCam: 0
   sizeUp: {x: 0, y: 0, z: 0}
 --- !u!1 &844472288
@@ -5145,6 +5303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &960252415
@@ -5338,11 +5497,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: 0.9914449, z: -0.13052616, w: 0}
-  m_LocalPosition: {x: 1403.2, y: 57.59, z: 5}
+  m_LocalPosition: {x: 1420.2, y: 74.3, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 15, y: 180, z: 0}
 --- !u!82 &963194229
 AudioSource:
@@ -5603,6 +5762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &993859352
@@ -5700,7 +5860,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &993859357
 MonoBehaviour:
@@ -5731,6 +5891,7 @@ MonoBehaviour:
   bulleTempsEntreChaqueBulle: 0.1
   bulleObject: {fileID: 1648083232}
   stunTimer: 15
+  isKnoc: 0
 --- !u!54 &993859358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5981,6 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1027931505
@@ -6217,6 +6379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1058551896
@@ -7106,7 +7269,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalScale.x
@@ -7614,6 +7777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1413053201
@@ -7850,6 +8014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1446157614
@@ -7991,6 +8156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1451614779
@@ -8227,6 +8393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1469634588
@@ -8601,6 +8768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1594016653
@@ -8727,6 +8895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1594016660
@@ -8883,6 +9052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1633047832
@@ -9061,7 +9231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1663890927
 GameObject:
@@ -9202,6 +9372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1692918922 stripped
@@ -9809,6 +9980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1754243623
@@ -10330,6 +10502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1867845037 stripped
@@ -10383,7 +10556,7 @@ Transform:
   - {fileID: 2094724237}
   - {fileID: 151378926}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1903312830 stripped
 Transform:
@@ -10886,6 +11059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2019811798 stripped
@@ -10920,7 +11094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1887399673955797800, guid: 4882c773e6f00e34bb10f83bf04feca0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1887399673955797800, guid: 4882c773e6f00e34bb10f83bf04feca0, type: 3}
       propertyPath: m_LocalScale.x
@@ -11306,6 +11480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2102453403
@@ -11599,6 +11774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2135442705
@@ -11740,6 +11916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2144453065
