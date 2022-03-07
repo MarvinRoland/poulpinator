@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &73550563
@@ -795,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &151378922
@@ -1100,6 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &189177499
@@ -1241,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &241584399
@@ -1382,6 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &259502192
@@ -1818,6 +1823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &330412808
@@ -2497,6 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &487473912
@@ -3073,6 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &615326410
@@ -3593,6 +3601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &698634336
@@ -4079,6 +4088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &766069959
@@ -4289,6 +4299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &774029987 stripped
@@ -4620,6 +4631,18 @@ MonoBehaviour:
   ancreRegenerationActive: 0
   ancreReserveAjoutTime: 1
   rotationSpeed: 300
+  expPhysique: 0
+  expToxic: 0
+  expSkill: 0
+  expToAdd: 0
+  expToRemove: 0
+  forcePhysique: 0
+  forceToxic: 0
+  lvlSkill1: 0
+  lvlSkill2: 0
+  lvlSkill3: 0
+  lvlSkill4: 0
+  lvlSkill5: 0
   cameraPlayer: {fileID: 963194227}
   cameraDistance: 5
   cameraHauteur: 5
@@ -5145,6 +5168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &960252415
@@ -5603,6 +5627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &993859352
@@ -5981,6 +6006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1027931505
@@ -6217,6 +6243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1058551896
@@ -7614,6 +7641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1413053201
@@ -7850,6 +7878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1446157614
@@ -7991,6 +8020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1451614779
@@ -8227,6 +8257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1469634588
@@ -8601,6 +8632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1594016653
@@ -8727,6 +8759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1594016660
@@ -8883,6 +8916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1001 &1633047832
@@ -9202,6 +9236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1692918922 stripped
@@ -9809,6 +9844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &1754243623
@@ -10330,6 +10366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!4 &1867845037 stripped
@@ -10620,31 +10657,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5582946
+      value: -0.6501454
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.8224327
+      value: -0.7519303
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.057567384
+      value: 0.06795939
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09272385
+      value: 0.08540051
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -245.182
+      value: -255.043
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 31.098007
+      value: 57.14
       objectReference: {fileID: 0}
     - target: {fileID: 5862849864537160215, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 28.181
+      value: 55.714996
       objectReference: {fileID: 0}
     - target: {fileID: 6491611547719131309, guid: c10724508ab1a70419a2e9fe98dd6450, type: 3}
       propertyPath: m_Name
@@ -10886,6 +10923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2019811798 stripped
@@ -11306,6 +11344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2102453403
@@ -11599,6 +11638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2135442705
@@ -11740,6 +11780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ddf681d1b50bb46ab21a991f4a5896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isToxicFood: 0
   speed: 10
   propulsionForce: 1
 --- !u!1 &2144453065
