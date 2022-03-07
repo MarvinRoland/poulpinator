@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] float ancreReserveAjoutTime; // temps entre chaque ajout naturel d'ancre dans la reserve
     [SerializeField] float rotationSpeed; // vitesse de rotation du poulpe
     [SerializeField] float expPhysique, expToxic, expSkill; // exp phys, exp toxic, exp avant prochain lvl
+    [SerializeField] float expToAdd, expToRemove; //exp ajouté 
     [SerializeField] int forcePhysique, forceToxic; // skill physique et toxic pour debloquer les skill
     [SerializeField] int lvlSkill1, lvlSkill2, lvlSkill3, lvlSkill4, lvlSkill5;
     [SerializeField] Camera cameraPlayer;
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
     int nbAncre, nbAncreToSpew;
     bool gameOver;
      
- 
+    float randZMin,randZMax;
 
 
     
@@ -46,7 +47,9 @@ public class Player : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {      
+        randZMin = -0.3f;
+        randZMax = 0.3f;  
         rb = this.gameObject.GetComponent<Rigidbody>();
         savedTimeShoot = Time.time;
         savedTimeSpriteAncre = Time.time;
@@ -65,16 +68,28 @@ public class Player : MonoBehaviour
         PlayerSetScale();
         JetDancre();
         SetPlayerAncre();
-
+        FixNegatifExp();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
         rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);
+        
         
         
     }
     void FixedUpdate()
     {
 
+    }
+    public void FixNegatifExp()
+    {
+        if(expPhysique < 0)
+        {
+            expPhysique = 0;
+        }
+        if(expToxic < 0)
+        {
+            expToxic = 0;
+        }
     }
     public void SetPlayerAncre()
     {
@@ -168,13 +183,13 @@ public class Player : MonoBehaviour
             disCam = cameraDistance += 0.1f;
             if(other.GetComponent<Bouffe>().isToxicFood)
             {
-                expPhysique -= 10;
-                expToxic += 25; 
+                expPhysique -= expToRemove;
+                expToxic += expToAdd; 
             }
             else
             {
-                expPhysique += 25;
-                expToxic -= 10;
+                expPhysique += expToAdd;
+                expToxic -= expToRemove;
             }
             
         }
@@ -203,21 +218,57 @@ public class Player : MonoBehaviour
             //skill pointes
             //propulsion plus puissante
             // armure
-            // devient plus gros
+            
 
+            //lvl 1
+            //propulsion plus puissante
+            //lvl2
+            //augment degat physique
+            //lvl3
+            //skill pointes
+            
             expSkill += 100;
             forcePhysique += 1;
+            if (forcePhysique == 1)
+            {
+                playerPropulsionForce += 10;
+            }
+            if (forcePhysique == 2)
+            {
+                //physique player damage ++
+            }
+            if (forcePhysique == 3)
+            {
+                // pointes isactive
+            }
         }
         if (expToxic > expSkill)
         {
-            //degats andre
-            // nb andre
-            // ancre toxic
-            //reserve dancre
-            //ancre autour
-            //devien toxic au touché
+            // lvl 1
+            //reserve dancre ameliore, ancre plus longue, taper avec le fouet ajoute un poison
+            //lvl2
+            //reserve ameliorée, ancre sur les coté
+            //lvl 3
+            //ancre devien toxic
             expToxic += 100;
             forceToxic +=1;
+            if (forceToxic == 1)
+            {
+                ancreReserveMax += 50;
+                ancreReserve = ancreReserveMax;
+            }
+            if (forceToxic == 2)
+            {
+                ancreReserveMax += 100;
+                ancreReserve = ancreReserveMax;
+                randZMin = -100.0f;
+                randZMax = 100.0f;
+            }
+            if (forceToxic == 3)
+            {
+                // pointes isactive
+            }
         }
+        
     }
 }
