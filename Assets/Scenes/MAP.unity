@@ -4794,6 +4794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPropulsionForce: 3
   playerDeceleration: 0.5
+  playerDamage: 0
+  spikeCD: 0
+  attackCD: 0
   ancrePuissanceDePropulsion: 10
   ancreTempsExiste: 5
   ancrePuissanceDecroissement: 1
@@ -4826,6 +4829,7 @@ MonoBehaviour:
   cameraDistance: 5
   cameraHauteur: 5
   ancreObject: {fileID: 3878242136021434201, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}
+  tentacle: {fileID: 0}
   disCam: 0
   sizeUp: {x: 0, y: 0, z: 0}
 --- !u!1 &844472288
@@ -6028,6 +6032,7 @@ MonoBehaviour:
   bulleTempsEntreChaqueBulle: 0.1
   bulleObject: {fileID: 1648083232}
   stunTimer: 15
+  isKnoc: 0
 --- !u!54 &993859358
 Rigidbody:
   m_ObjectHideFlags: 0
