@@ -1,0 +1,2034 @@
+fileFormatVersion: 2
+guid: 0b42fc0ac002a1f4aaa9c0e9bfb4d926
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 1630626133695074427
+    second: yeux crabe|patte 1 droite .001Action
+  - first:
+      74: 6202897488870818449
+    second: yeux crabe|patte 1 gauche.002Action.001
+  - first:
+      74: 5742856564331204805
+    second: yeux crabe|patte 2 droite.001Action
+  - first:
+      74: -9217877232570419941
+    second: yeux crabe|patte 2 gauche.001Action
+  - first:
+      74: 7820202406072677574
+    second: yeux crabe|patte 3 droite.001Action
+  - first:
+      74: 352820420522246565
+    second: yeux crabe|patte 3 gauche.001Action.001
+  - first:
+      74: -8876009000443764658
+    second: yeux crabe|patte 4 droite.001Action
+  - first:
+      74: 2386123812907316320
+    second: yeux crabe|patte 4 gauche.001Action
+  - first:
+      74: 5866504267925799300
+    second: yeux crabe|pince droite.001Action
+  - first:
+      74: -2433275569223565573
+    second: yeux crabe|pince droite.002Action
+  - first:
+      74: 3561290596603913840
+    second: yeux crabe|pince gauche.001Action
+  - first:
+      74: 4788224932302826486
+    second: yeux crabe|pince gauche.002Action
+  - first:
+      74: 8572390735715560893
+    second: yeux crabe|tenataculle droite 1Action
+  - first:
+      74: -8767432678793187914
+    second: yeux crabe|tentaculle droite 2Action
+  - first:
+      74: -7412045476569746495
+    second: yeux crabe|tentaculle gauche 1Action.001
+  - first:
+      74: -7005098028954195874
+    second: yeux crabe|tentaculle gauche 2.001Action
+  - first:
+      74: -3715128489174480006
+    second: yeux crabe|tentaculle milieu.001Action
+  - first:
+      74: -6433776872625904569
+    second: yeux crabe|tentaculle milieu.002Action
+  - first:
+      74: 1222407367867967298
+    second: yeux crabe|tentaculle milieu.003Action
+  - first:
+      74: 3065112001506126878
+    second: yeux crabe|tentaculle milieu.004Action
+  - first:
+      74: -9007107942722209034
+    second: yeux crabe|tentaculle milieuAction.001
+  - first:
+      74: 5643606990319866981
+    second: "yeux crabe|t\xEAteAction"
+  - first:
+      74: -6452808840450465198
+    second: yeux crabe|yeux.001Action
+  - first:
+      74: -1050043015919055252
+    second: corps crabe|patte 1 droite .001Action
+  - first:
+      74: -3715182072526155537
+    second: corps crabe|patte 1 gauche.002Action.001
+  - first:
+      74: -2423797476114486320
+    second: corps crabe|patte 2 droite.001Action
+  - first:
+      74: -4488985807292991618
+    second: corps crabe|patte 2 gauche.001Action
+  - first:
+      74: -6137204213014839523
+    second: corps crabe|patte 3 droite.001Action
+  - first:
+      74: -948255754936315489
+    second: corps crabe|patte 3 gauche.001Action.001
+  - first:
+      74: 7333542124305550862
+    second: corps crabe|patte 4 droite.001Action
+  - first:
+      74: 4492412340964292923
+    second: corps crabe|patte 4 gauche.001Action
+  - first:
+      74: -3750704537658033166
+    second: corps crabe|pince droite.001Action
+  - first:
+      74: -8699674643896194951
+    second: corps crabe|pince droite.002Action
+  - first:
+      74: -5418018329706898750
+    second: corps crabe|pince gauche.001Action
+  - first:
+      74: 3841888772928783028
+    second: corps crabe|pince gauche.002Action
+  - first:
+      74: -5113720006094810844
+    second: corps crabe|tenataculle droite 1Action
+  - first:
+      74: -6929722282012935084
+    second: corps crabe|tentaculle droite 2Action
+  - first:
+      74: -9173027175380323238
+    second: corps crabe|tentaculle gauche 1Action.001
+  - first:
+      74: -3810526007012856527
+    second: corps crabe|tentaculle gauche 2.001Action
+  - first:
+      74: -4752410749064511289
+    second: corps crabe|tentaculle milieu.001Action
+  - first:
+      74: -7489446441947599263
+    second: corps crabe|tentaculle milieu.002Action
+  - first:
+      74: 7746152050565851788
+    second: corps crabe|tentaculle milieu.003Action
+  - first:
+      74: -261287503738883355
+    second: corps crabe|tentaculle milieu.004Action
+  - first:
+      74: 2947005791816480698
+    second: corps crabe|tentaculle milieuAction.001
+  - first:
+      74: 5947171850655762358
+    second: "corps crabe|t\xEAteAction"
+  - first:
+      74: 4372476618767402591
+    second: corps crabe|yeux.001Action
+  - first:
+      74: 4649104918678410197
+    second: patte 1 gauche|patte 1 droite .001Action
+  - first:
+      74: -4579914486568207228
+    second: patte 1 gauche|patte 1 gauche.002Action.001
+  - first:
+      74: 1096323724259030063
+    second: patte 1 gauche|patte 2 droite.001Action
+  - first:
+      74: -5219729988638797500
+    second: patte 1 gauche|patte 2 gauche.001Action
+  - first:
+      74: 844517583580117151
+    second: patte 1 gauche|patte 3 droite.001Action
+  - first:
+      74: 3308080098589280752
+    second: patte 1 gauche|patte 3 gauche.001Action.001
+  - first:
+      74: -8263514399831494819
+    second: patte 1 gauche|patte 4 droite.001Action
+  - first:
+      74: 9033291328205435969
+    second: patte 1 gauche|patte 4 gauche.001Action
+  - first:
+      74: 4082421368686436020
+    second: patte 1 gauche|pince droite.001Action
+  - first:
+      74: 4678653525946337484
+    second: patte 1 gauche|pince droite.002Action
+  - first:
+      74: -988634565464207506
+    second: patte 1 gauche|pince gauche.001Action
+  - first:
+      74: 728910416166518594
+    second: patte 1 gauche|pince gauche.002Action
+  - first:
+      74: -1375837577152988002
+    second: patte 1 gauche|tenataculle droite 1Action
+  - first:
+      74: 3092944677506198153
+    second: patte 1 gauche|tentaculle droite 2Action
+  - first:
+      74: -3085642663540205775
+    second: patte 1 gauche|tentaculle gauche 1Action.001
+  - first:
+      74: -1171922971955682600
+    second: patte 1 gauche|tentaculle gauche 2.001Action
+  - first:
+      74: -4475494488582708522
+    second: patte 1 gauche|tentaculle milieu.001Action
+  - first:
+      74: 820494003739643808
+    second: patte 1 gauche|tentaculle milieu.002Action
+  - first:
+      74: 8237141573141823282
+    second: patte 1 gauche|tentaculle milieu.003Action
+  - first:
+      74: -476871650791241226
+    second: patte 1 gauche|tentaculle milieu.004Action
+  - first:
+      74: -1836765795630587500
+    second: patte 1 gauche|tentaculle milieuAction.001
+  - first:
+      74: 9134074833074236948
+    second: "patte 1 gauche|t\xEAteAction"
+  - first:
+      74: -7535743982181720714
+    second: patte 1 gauche|yeux.001Action
+  - first:
+      74: 2701999989761794834
+    second: patte 2 gauche|patte 1 droite .001Action
+  - first:
+      74: -4506802149629993072
+    second: patte 2 gauche|patte 1 gauche.002Action.001
+  - first:
+      74: 3834265889165842764
+    second: patte 2 gauche|patte 2 droite.001Action
+  - first:
+      74: 1119874226623088851
+    second: patte 2 gauche|patte 2 gauche.001Action
+  - first:
+      74: -5758574673113531105
+    second: patte 2 gauche|patte 3 droite.001Action
+  - first:
+      74: -3864123119275380163
+    second: patte 2 gauche|patte 3 gauche.001Action.001
+  - first:
+      74: -2455719505537959118
+    second: patte 2 gauche|patte 4 droite.001Action
+  - first:
+      74: 2427335006221767283
+    second: patte 2 gauche|patte 4 gauche.001Action
+  - first:
+      74: -1304672828955100957
+    second: patte 2 gauche|pince droite.001Action
+  - first:
+      74: 4444660441863066490
+    second: patte 2 gauche|pince droite.002Action
+  - first:
+      74: 5255722983429863991
+    second: patte 2 gauche|pince gauche.001Action
+  - first:
+      74: -4530869144027329407
+    second: patte 2 gauche|pince gauche.002Action
+  - first:
+      74: -6277435301553649647
+    second: patte 2 gauche|tenataculle droite 1Action
+  - first:
+      74: -7143741777804134507
+    second: patte 2 gauche|tentaculle droite 2Action
+  - first:
+      74: -7560939162089503106
+    second: patte 2 gauche|tentaculle gauche 1Action.001
+  - first:
+      74: -5701287600381071607
+    second: patte 2 gauche|tentaculle gauche 2.001Action
+  - first:
+      74: 4819995699120348664
+    second: patte 2 gauche|tentaculle milieu.001Action
+  - first:
+      74: 9211306766606574014
+    second: patte 2 gauche|tentaculle milieu.002Action
+  - first:
+      74: 4121800361904679007
+    second: patte 2 gauche|tentaculle milieu.003Action
+  - first:
+      74: 3765658602467555503
+    second: patte 2 gauche|tentaculle milieu.004Action
+  - first:
+      74: 8573015383099999777
+    second: patte 2 gauche|tentaculle milieuAction.001
+  - first:
+      74: -976435600417409831
+    second: "patte 2 gauche|t\xEAteAction"
+  - first:
+      74: -8271361234076466525
+    second: patte 2 gauche|yeux.001Action
+  - first:
+      74: -6438682750812820960
+    second: patte 3 gauche|patte 1 droite .001Action
+  - first:
+      74: -7408899425736897995
+    second: patte 3 gauche|patte 1 gauche.002Action.001
+  - first:
+      74: 1480211562830839104
+    second: patte 3 gauche|patte 2 droite.001Action
+  - first:
+      74: 5562615302481204941
+    second: patte 3 gauche|patte 2 gauche.001Action
+  - first:
+      74: -7166795583789138892
+    second: patte 3 gauche|patte 3 droite.001Action
+  - first:
+      74: -3634892256435050172
+    second: patte 3 gauche|patte 3 gauche.001Action.001
+  - first:
+      74: 7749201322227418473
+    second: patte 3 gauche|patte 4 droite.001Action
+  - first:
+      74: -7163114572803495636
+    second: patte 3 gauche|patte 4 gauche.001Action
+  - first:
+      74: 5244043595884425623
+    second: patte 3 gauche|pince droite.001Action
+  - first:
+      74: 6310448964230559013
+    second: patte 3 gauche|pince droite.002Action
+  - first:
+      74: 2867204832034518136
+    second: patte 3 gauche|pince gauche.001Action
+  - first:
+      74: -6968288319296879410
+    second: patte 3 gauche|pince gauche.002Action
+  - first:
+      74: -6526516223709191011
+    second: patte 3 gauche|tenataculle droite 1Action
+  - first:
+      74: 2422139280536416063
+    second: patte 3 gauche|tentaculle droite 2Action
+  - first:
+      74: -2770880966479320013
+    second: patte 3 gauche|tentaculle gauche 1Action.001
+  - first:
+      74: 1035092283039803425
+    second: patte 3 gauche|tentaculle gauche 2.001Action
+  - first:
+      74: 1390076767440443527
+    second: patte 3 gauche|tentaculle milieu.001Action
+  - first:
+      74: 8896272034471005258
+    second: patte 3 gauche|tentaculle milieu.002Action
+  - first:
+      74: -4034841361091910825
+    second: patte 3 gauche|tentaculle milieu.003Action
+  - first:
+      74: 3911291455005081683
+    second: patte 3 gauche|tentaculle milieu.004Action
+  - first:
+      74: -2898801653192404705
+    second: patte 3 gauche|tentaculle milieuAction.001
+  - first:
+      74: -4102448276447752107
+    second: "patte 3 gauche|t\xEAteAction"
+  - first:
+      74: 20654481294753644
+    second: patte 3 gauche|yeux.001Action
+  - first:
+      74: 8734710909673538556
+    second: patte 4 gauche|patte 1 droite .001Action
+  - first:
+      74: -6730394925092765162
+    second: patte 4 gauche|patte 1 gauche.002Action.001
+  - first:
+      74: 4350448475709741063
+    second: patte 4 gauche|patte 2 droite.001Action
+  - first:
+      74: -8840718785981183311
+    second: patte 4 gauche|patte 2 gauche.001Action
+  - first:
+      74: -6093711415061925411
+    second: patte 4 gauche|patte 3 droite.001Action
+  - first:
+      74: -4714281354906123126
+    second: patte 4 gauche|patte 3 gauche.001Action.001
+  - first:
+      74: -4495591902366883284
+    second: patte 4 gauche|patte 4 droite.001Action
+  - first:
+      74: 1191818060565873440
+    second: patte 4 gauche|patte 4 gauche.001Action
+  - first:
+      74: 4417007343359941256
+    second: patte 4 gauche|pince droite.001Action
+  - first:
+      74: 668836043456098918
+    second: patte 4 gauche|pince droite.002Action
+  - first:
+      74: -3312487476801349821
+    second: patte 4 gauche|pince gauche.001Action
+  - first:
+      74: 1048692148622683455
+    second: patte 4 gauche|pince gauche.002Action
+  - first:
+      74: -726800048666603480
+    second: patte 4 gauche|tenataculle droite 1Action
+  - first:
+      74: 6615608713740530394
+    second: patte 4 gauche|tentaculle droite 2Action
+  - first:
+      74: -8730381808281906735
+    second: patte 4 gauche|tentaculle gauche 1Action.001
+  - first:
+      74: 8749620425377352722
+    second: patte 4 gauche|tentaculle gauche 2.001Action
+  - first:
+      74: 3938786823680337475
+    second: patte 4 gauche|tentaculle milieu.001Action
+  - first:
+      74: -8150964515091621558
+    second: patte 4 gauche|tentaculle milieu.002Action
+  - first:
+      74: -2433050258413445697
+    second: patte 4 gauche|tentaculle milieu.003Action
+  - first:
+      74: -1098961818998671347
+    second: patte 4 gauche|tentaculle milieu.004Action
+  - first:
+      74: 8266101619717178496
+    second: patte 4 gauche|tentaculle milieuAction.001
+  - first:
+      74: -7584715041796747265
+    second: "patte 4 gauche|t\xEAteAction"
+  - first:
+      74: 3704190809676353944
+    second: patte 4 gauche|yeux.001Action
+  - first:
+      74: -326779677877235808
+    second: patte 4 droite|patte 1 droite .001Action
+  - first:
+      74: 3240714384708442434
+    second: patte 4 droite|patte 1 gauche.002Action.001
+  - first:
+      74: 5550787843229934844
+    second: patte 4 droite|patte 2 droite.001Action
+  - first:
+      74: 8191647884146366235
+    second: patte 4 droite|patte 2 gauche.001Action
+  - first:
+      74: -1957561852004460227
+    second: patte 4 droite|patte 3 droite.001Action
+  - first:
+      74: 8155633314402059048
+    second: patte 4 droite|patte 3 gauche.001Action.001
+  - first:
+      74: -3267668926535112450
+    second: patte 4 droite|patte 4 droite.001Action
+  - first:
+      74: 3320634158403674798
+    second: patte 4 droite|patte 4 gauche.001Action
+  - first:
+      74: -2714819490411812567
+    second: patte 4 droite|pince droite.001Action
+  - first:
+      74: 4939624317300835963
+    second: patte 4 droite|pince droite.002Action
+  - first:
+      74: 1219500801291804589
+    second: patte 4 droite|pince gauche.001Action
+  - first:
+      74: 1243945994964606246
+    second: patte 4 droite|pince gauche.002Action
+  - first:
+      74: 3133912750853414587
+    second: patte 4 droite|tenataculle droite 1Action
+  - first:
+      74: -333499974562282863
+    second: patte 4 droite|tentaculle droite 2Action
+  - first:
+      74: -3980953515473659664
+    second: patte 4 droite|tentaculle gauche 1Action.001
+  - first:
+      74: 3181319214523622362
+    second: patte 4 droite|tentaculle gauche 2.001Action
+  - first:
+      74: -9175221690330036581
+    second: patte 4 droite|tentaculle milieu.001Action
+  - first:
+      74: 7431779610085133157
+    second: patte 4 droite|tentaculle milieu.002Action
+  - first:
+      74: 7537917894193833057
+    second: patte 4 droite|tentaculle milieu.003Action
+  - first:
+      74: -5615287576363301155
+    second: patte 4 droite|tentaculle milieu.004Action
+  - first:
+      74: -2338351006512947343
+    second: patte 4 droite|tentaculle milieuAction.001
+  - first:
+      74: 1631082618319590029
+    second: "patte 4 droite|t\xEAteAction"
+  - first:
+      74: -6275644637010290452
+    second: patte 4 droite|yeux.001Action
+  - first:
+      74: 1380765986454676956
+    second: patte 3 droite|patte 1 droite .001Action
+  - first:
+      74: 6976957381451589631
+    second: patte 3 droite|patte 1 gauche.002Action.001
+  - first:
+      74: -7762953545617716753
+    second: patte 3 droite|patte 2 droite.001Action
+  - first:
+      74: -1699840404735805283
+    second: patte 3 droite|patte 2 gauche.001Action
+  - first:
+      74: -9057768251735614764
+    second: patte 3 droite|patte 3 droite.001Action
+  - first:
+      74: 6186825571536469088
+    second: patte 3 droite|patte 3 gauche.001Action.001
+  - first:
+      74: 6741886505437770577
+    second: patte 3 droite|patte 4 droite.001Action
+  - first:
+      74: 2900737159764575993
+    second: patte 3 droite|patte 4 gauche.001Action
+  - first:
+      74: -4741071108063463552
+    second: patte 3 droite|pince droite.001Action
+  - first:
+      74: -584532374823248639
+    second: patte 3 droite|pince droite.002Action
+  - first:
+      74: -8078038090566117500
+    second: patte 3 droite|pince gauche.001Action
+  - first:
+      74: 5339518672902726392
+    second: patte 3 droite|pince gauche.002Action
+  - first:
+      74: -8389379585332369112
+    second: patte 3 droite|tenataculle droite 1Action
+  - first:
+      74: -3787189597544432708
+    second: patte 3 droite|tentaculle droite 2Action
+  - first:
+      74: 8649370620110464367
+    second: patte 3 droite|tentaculle gauche 1Action.001
+  - first:
+      74: 7492144152783592314
+    second: patte 3 droite|tentaculle gauche 2.001Action
+  - first:
+      74: -3018962353999369891
+    second: patte 3 droite|tentaculle milieu.001Action
+  - first:
+      74: 2283282970028507734
+    second: patte 3 droite|tentaculle milieu.002Action
+  - first:
+      74: 3691984697047604428
+    second: patte 3 droite|tentaculle milieu.003Action
+  - first:
+      74: -6553517591089339442
+    second: patte 3 droite|tentaculle milieu.004Action
+  - first:
+      74: 3950631816675235568
+    second: patte 3 droite|tentaculle milieuAction.001
+  - first:
+      74: -5783216335987079805
+    second: "patte 3 droite|t\xEAteAction"
+  - first:
+      74: 7977332272276266122
+    second: patte 3 droite|yeux.001Action
+  - first:
+      74: 2857020717784932349
+    second: patte 2 droite|patte 1 droite .001Action
+  - first:
+      74: 6817574239919904034
+    second: patte 2 droite|patte 1 gauche.002Action.001
+  - first:
+      74: 7822763998227414904
+    second: patte 2 droite|patte 2 droite.001Action
+  - first:
+      74: 7383834107115806957
+    second: patte 2 droite|patte 2 gauche.001Action
+  - first:
+      74: 5946939014237594253
+    second: patte 2 droite|patte 3 droite.001Action
+  - first:
+      74: 1747837283291963739
+    second: patte 2 droite|patte 3 gauche.001Action.001
+  - first:
+      74: -4269183700817756375
+    second: patte 2 droite|patte 4 droite.001Action
+  - first:
+      74: 758337988933909925
+    second: patte 2 droite|patte 4 gauche.001Action
+  - first:
+      74: 3340291064077025236
+    second: patte 2 droite|pince droite.001Action
+  - first:
+      74: 2653623740313053615
+    second: patte 2 droite|pince droite.002Action
+  - first:
+      74: 4286668955792340857
+    second: patte 2 droite|pince gauche.001Action
+  - first:
+      74: -1970429347015034927
+    second: patte 2 droite|pince gauche.002Action
+  - first:
+      74: 7236676375267916099
+    second: patte 2 droite|tenataculle droite 1Action
+  - first:
+      74: 1508218064492222069
+    second: patte 2 droite|tentaculle droite 2Action
+  - first:
+      74: 2672374514106519768
+    second: patte 2 droite|tentaculle gauche 1Action.001
+  - first:
+      74: -4850543012668370869
+    second: patte 2 droite|tentaculle gauche 2.001Action
+  - first:
+      74: -4263664853100877178
+    second: patte 2 droite|tentaculle milieu.001Action
+  - first:
+      74: -8969185513119662895
+    second: patte 2 droite|tentaculle milieu.002Action
+  - first:
+      74: -860354761092634998
+    second: patte 2 droite|tentaculle milieu.003Action
+  - first:
+      74: 576887287687927402
+    second: patte 2 droite|tentaculle milieu.004Action
+  - first:
+      74: 150290927698946185
+    second: patte 2 droite|tentaculle milieuAction.001
+  - first:
+      74: -4858535733103693950
+    second: "patte 2 droite|t\xEAteAction"
+  - first:
+      74: 5645799201145875597
+    second: patte 2 droite|yeux.001Action
+  - first:
+      74: 2607822471802678361
+    second: mendibulle gauche|patte 1 droite .001Action
+  - first:
+      74: 669668587251268416
+    second: mendibulle gauche|patte 1 gauche.002Action.001
+  - first:
+      74: -8056531718259375804
+    second: mendibulle gauche|patte 2 droite.001Action
+  - first:
+      74: 53197830562121386
+    second: mendibulle gauche|patte 2 gauche.001Action
+  - first:
+      74: 2266919953937400306
+    second: mendibulle gauche|patte 3 droite.001Action
+  - first:
+      74: -9217187679375782253
+    second: mendibulle gauche|patte 3 gauche.001Action.001
+  - first:
+      74: 372966873018216428
+    second: mendibulle gauche|patte 4 droite.001Action
+  - first:
+      74: 5356274377528803300
+    second: mendibulle gauche|patte 4 gauche.001Action
+  - first:
+      74: 7920369464818489780
+    second: mendibulle gauche|pince droite.001Action
+  - first:
+      74: 4737673993623819862
+    second: mendibulle gauche|pince droite.002Action
+  - first:
+      74: 7057592452277633552
+    second: mendibulle gauche|pince gauche.001Action
+  - first:
+      74: -4431563072761211530
+    second: mendibulle gauche|pince gauche.002Action
+  - first:
+      74: -8361007610993424323
+    second: mendibulle gauche|tenataculle droite 1Action
+  - first:
+      74: 9127857059033907898
+    second: mendibulle gauche|tentaculle droite 2Action
+  - first:
+      74: -798503460380096525
+    second: mendibulle gauche|tentaculle gauche 1Action.001
+  - first:
+      74: 6159875398637862163
+    second: mendibulle gauche|tentaculle gauche 2.001Action
+  - first:
+      74: -274600835747360239
+    second: mendibulle gauche|tentaculle milieu.001Action
+  - first:
+      74: -4681213542160222611
+    second: mendibulle gauche|tentaculle milieu.002Action
+  - first:
+      74: 8154162438568056786
+    second: mendibulle gauche|tentaculle milieu.003Action
+  - first:
+      74: 4615550312813573718
+    second: mendibulle gauche|tentaculle milieu.004Action
+  - first:
+      74: -7614074451332478178
+    second: mendibulle gauche|tentaculle milieuAction.001
+  - first:
+      74: 8200282268685066368
+    second: "mendibulle gauche|t\xEAteAction"
+  - first:
+      74: 5012570205704616604
+    second: mendibulle gauche|yeux.001Action
+  - first:
+      74: 8530850508759876897
+    second: patte 1 droite |patte 1 droite .001Action
+  - first:
+      74: 4537032292778077523
+    second: patte 1 droite |patte 1 gauche.002Action.001
+  - first:
+      74: 7952875022339367384
+    second: patte 1 droite |patte 2 droite.001Action
+  - first:
+      74: -6643234382485067096
+    second: patte 1 droite |patte 2 gauche.001Action
+  - first:
+      74: -2178145002381372454
+    second: patte 1 droite |patte 3 droite.001Action
+  - first:
+      74: 6288014832711784070
+    second: patte 1 droite |patte 3 gauche.001Action.001
+  - first:
+      74: 4497973345311842159
+    second: patte 1 droite |patte 4 droite.001Action
+  - first:
+      74: 6796206338225628550
+    second: patte 1 droite |patte 4 gauche.001Action
+  - first:
+      74: 115097318502199991
+    second: patte 1 droite |pince droite.001Action
+  - first:
+      74: 940520154039021942
+    second: patte 1 droite |pince droite.002Action
+  - first:
+      74: -7226713638115959399
+    second: patte 1 droite |pince gauche.001Action
+  - first:
+      74: 7025931471509877270
+    second: patte 1 droite |pince gauche.002Action
+  - first:
+      74: -3224126759756379088
+    second: patte 1 droite |tenataculle droite 1Action
+  - first:
+      74: 15906815718513455
+    second: patte 1 droite |tentaculle droite 2Action
+  - first:
+      74: -8415963005033479457
+    second: patte 1 droite |tentaculle gauche 1Action.001
+  - first:
+      74: -3140890525137876549
+    second: patte 1 droite |tentaculle gauche 2.001Action
+  - first:
+      74: 8197266444263852755
+    second: patte 1 droite |tentaculle milieu.001Action
+  - first:
+      74: 8088735324543741940
+    second: patte 1 droite |tentaculle milieu.002Action
+  - first:
+      74: -5495311526414831027
+    second: patte 1 droite |tentaculle milieu.003Action
+  - first:
+      74: -1166086292264676663
+    second: patte 1 droite |tentaculle milieu.004Action
+  - first:
+      74: 8376740275488691355
+    second: patte 1 droite |tentaculle milieuAction.001
+  - first:
+      74: -780794995177694341
+    second: "patte 1 droite |t\xEAteAction"
+  - first:
+      74: -5144689089384538250
+    second: patte 1 droite |yeux.001Action
+  - first:
+      74: -5395176196720208008
+    second: queau|patte 1 droite .001Action
+  - first:
+      74: 3966706316626663407
+    second: queau|patte 1 gauche.002Action.001
+  - first:
+      74: -8016336711996640938
+    second: queau|patte 2 droite.001Action
+  - first:
+      74: -3257124989748823926
+    second: queau|patte 2 gauche.001Action
+  - first:
+      74: -4635575664948090952
+    second: queau|patte 3 droite.001Action
+  - first:
+      74: -8307052974998323685
+    second: queau|patte 3 gauche.001Action.001
+  - first:
+      74: 7008462839254182021
+    second: queau|patte 4 droite.001Action
+  - first:
+      74: -6210991658039958809
+    second: queau|patte 4 gauche.001Action
+  - first:
+      74: 7830160058815546650
+    second: queau|pince droite.001Action
+  - first:
+      74: -8814239741030729056
+    second: queau|pince droite.002Action
+  - first:
+      74: -3695787481662314773
+    second: queau|pince gauche.001Action
+  - first:
+      74: 2228608013718939258
+    second: queau|pince gauche.002Action
+  - first:
+      74: -1459225347524470616
+    second: queau|tenataculle droite 1Action
+  - first:
+      74: -1406877753622686194
+    second: queau|tentaculle droite 2Action
+  - first:
+      74: -1454706434202165050
+    second: queau|tentaculle gauche 1Action.001
+  - first:
+      74: 4151617237017392164
+    second: queau|tentaculle gauche 2.001Action
+  - first:
+      74: 7391988139572557134
+    second: queau|tentaculle milieu.001Action
+  - first:
+      74: -1695027823421004252
+    second: queau|tentaculle milieu.002Action
+  - first:
+      74: -4163489767525330699
+    second: queau|tentaculle milieu.003Action
+  - first:
+      74: -6361883402958392851
+    second: queau|tentaculle milieu.004Action
+  - first:
+      74: 6443862263335500622
+    second: queau|tentaculle milieuAction.001
+  - first:
+      74: 2317837365023948775
+    second: "queau|t\xEAteAction"
+  - first:
+      74: -8731049666934321995
+    second: queau|yeux.001Action
+  - first:
+      74: -2825624706781686306
+    second: pince droite|patte 1 droite .001Action
+  - first:
+      74: -4313171208836604971
+    second: pince droite|patte 1 gauche.002Action.001
+  - first:
+      74: -993786024499346883
+    second: pince droite|patte 2 droite.001Action
+  - first:
+      74: 6034309473213494122
+    second: pince droite|patte 2 gauche.001Action
+  - first:
+      74: -3073975749831470076
+    second: pince droite|patte 3 droite.001Action
+  - first:
+      74: -1961294218221396126
+    second: pince droite|patte 3 gauche.001Action.001
+  - first:
+      74: 8408262539491606400
+    second: pince droite|patte 4 droite.001Action
+  - first:
+      74: -4359333366612264137
+    second: pince droite|patte 4 gauche.001Action
+  - first:
+      74: 5237988117095972219
+    second: pince droite|pince droite.001Action
+  - first:
+      74: 6581284259048688294
+    second: pince droite|pince droite.002Action
+  - first:
+      74: -3175692568322956858
+    second: pince droite|pince gauche.001Action
+  - first:
+      74: -274698752260078978
+    second: pince droite|pince gauche.002Action
+  - first:
+      74: 4810602568157626756
+    second: pince droite|tenataculle droite 1Action
+  - first:
+      74: -5386754488301500165
+    second: pince droite|tentaculle droite 2Action
+  - first:
+      74: 81008565397607523
+    second: pince droite|tentaculle gauche 1Action.001
+  - first:
+      74: 5791072500885380723
+    second: pince droite|tentaculle gauche 2.001Action
+  - first:
+      74: -8798262522783804288
+    second: pince droite|tentaculle milieu.001Action
+  - first:
+      74: 887166020124746225
+    second: pince droite|tentaculle milieu.002Action
+  - first:
+      74: 5588741870848858772
+    second: pince droite|tentaculle milieu.003Action
+  - first:
+      74: -6459931586756521533
+    second: pince droite|tentaculle milieu.004Action
+  - first:
+      74: 214240516749530084
+    second: pince droite|tentaculle milieuAction.001
+  - first:
+      74: -8655139614101467256
+    second: "pince droite|t\xEAteAction"
+  - first:
+      74: -5619908970720768141
+    second: pince droite|yeux.001Action
+  - first:
+      74: -7525530595977694256
+    second: pince gauche|patte 1 droite .001Action
+  - first:
+      74: 4349599487816571910
+    second: pince gauche|patte 1 gauche.002Action.001
+  - first:
+      74: -4953100795600869406
+    second: pince gauche|patte 2 droite.001Action
+  - first:
+      74: -8774949407024863900
+    second: pince gauche|patte 2 gauche.001Action
+  - first:
+      74: -4675610717939099614
+    second: pince gauche|patte 3 droite.001Action
+  - first:
+      74: 7209266786888864041
+    second: pince gauche|patte 3 gauche.001Action.001
+  - first:
+      74: 1703896391913738945
+    second: pince gauche|patte 4 droite.001Action
+  - first:
+      74: 2924476653713344674
+    second: pince gauche|patte 4 gauche.001Action
+  - first:
+      74: -4090083135270628972
+    second: pince gauche|pince droite.001Action
+  - first:
+      74: -898778675870372428
+    second: pince gauche|pince droite.002Action
+  - first:
+      74: 7235644362485472168
+    second: pince gauche|pince gauche.001Action
+  - first:
+      74: -9138948821469388765
+    second: pince gauche|pince gauche.002Action
+  - first:
+      74: 5154976360958862565
+    second: pince gauche|tenataculle droite 1Action
+  - first:
+      74: -8904063441532606711
+    second: pince gauche|tentaculle droite 2Action
+  - first:
+      74: -2078673668174580125
+    second: pince gauche|tentaculle gauche 1Action.001
+  - first:
+      74: 4145360462814546229
+    second: pince gauche|tentaculle gauche 2.001Action
+  - first:
+      74: -6522618360672726480
+    second: pince gauche|tentaculle milieu.001Action
+  - first:
+      74: 2369873030870919252
+    second: pince gauche|tentaculle milieu.002Action
+  - first:
+      74: 178052628409867783
+    second: pince gauche|tentaculle milieu.003Action
+  - first:
+      74: 5134357775272265663
+    second: pince gauche|tentaculle milieu.004Action
+  - first:
+      74: 3736984376927743013
+    second: pince gauche|tentaculle milieuAction.001
+  - first:
+      74: 2051478855645092604
+    second: "pince gauche|t\xEAteAction"
+  - first:
+      74: -2065002350875278407
+    second: pince gauche|yeux.001Action
+  - first:
+      74: 5958788913512182903
+    second: mendibulle droite|patte 1 droite .001Action
+  - first:
+      74: 1474976136130679175
+    second: mendibulle droite|patte 1 gauche.002Action.001
+  - first:
+      74: -3084023202324991225
+    second: mendibulle droite|patte 2 droite.001Action
+  - first:
+      74: 6338353365620338469
+    second: mendibulle droite|patte 2 gauche.001Action
+  - first:
+      74: -4973267758394411670
+    second: mendibulle droite|patte 3 droite.001Action
+  - first:
+      74: 3946100391628265167
+    second: mendibulle droite|patte 3 gauche.001Action.001
+  - first:
+      74: -184193168392746356
+    second: mendibulle droite|patte 4 droite.001Action
+  - first:
+      74: -8890537891796655512
+    second: mendibulle droite|patte 4 gauche.001Action
+  - first:
+      74: -6679443657796251500
+    second: mendibulle droite|pince droite.001Action
+  - first:
+      74: 8173133351873115728
+    second: mendibulle droite|pince droite.002Action
+  - first:
+      74: -7043742239182017688
+    second: mendibulle droite|pince gauche.001Action
+  - first:
+      74: 7741143124592097221
+    second: mendibulle droite|pince gauche.002Action
+  - first:
+      74: -7992161013646768000
+    second: mendibulle droite|tenataculle droite 1Action
+  - first:
+      74: 2512996623397932824
+    second: mendibulle droite|tentaculle droite 2Action
+  - first:
+      74: 4806275206768722604
+    second: mendibulle droite|tentaculle gauche 1Action.001
+  - first:
+      74: -5206521241427367097
+    second: mendibulle droite|tentaculle gauche 2.001Action
+  - first:
+      74: 5646064522017398916
+    second: mendibulle droite|tentaculle milieu.001Action
+  - first:
+      74: -1777690636940256709
+    second: mendibulle droite|tentaculle milieu.002Action
+  - first:
+      74: 7787955844441342696
+    second: mendibulle droite|tentaculle milieu.003Action
+  - first:
+      74: -7474324874314169844
+    second: mendibulle droite|tentaculle milieu.004Action
+  - first:
+      74: -7986054169350066569
+    second: mendibulle droite|tentaculle milieuAction.001
+  - first:
+      74: 3081391751617594841
+    second: "mendibulle droite|t\xEAteAction"
+  - first:
+      74: -332919026382696822
+    second: mendibulle droite|yeux.001Action
+  - first:
+      74: 1227332440686855930
+    second: pince droite.001|patte 1 droite .001Action
+  - first:
+      74: -2528455601405824716
+    second: pince droite.001|patte 1 gauche.002Action.001
+  - first:
+      74: 5598614364365739103
+    second: pince droite.001|patte 2 droite.001Action
+  - first:
+      74: 156021067145132465
+    second: pince droite.001|patte 2 gauche.001Action
+  - first:
+      74: 7843051397029986700
+    second: pince droite.001|patte 3 droite.001Action
+  - first:
+      74: 655486045422348128
+    second: pince droite.001|patte 3 gauche.001Action.001
+  - first:
+      74: -7395845563931694653
+    second: pince droite.001|patte 4 droite.001Action
+  - first:
+      74: 684362375811049151
+    second: pince droite.001|patte 4 gauche.001Action
+  - first:
+      74: -8630144439968037052
+    second: pince droite.001|pince droite.001Action
+  - first:
+      74: -4843435103206243810
+    second: pince droite.001|pince droite.002Action
+  - first:
+      74: 4006109754893533866
+    second: pince droite.001|pince gauche.001Action
+  - first:
+      74: -6134036728403627790
+    second: pince droite.001|pince gauche.002Action
+  - first:
+      74: 7838232982217688303
+    second: pince droite.001|tenataculle droite 1Action
+  - first:
+      74: -561319071425427981
+    second: pince droite.001|tentaculle droite 2Action
+  - first:
+      74: -731927178824528704
+    second: pince droite.001|tentaculle gauche 1Action.001
+  - first:
+      74: -4845743611667095979
+    second: pince droite.001|tentaculle gauche 2.001Action
+  - first:
+      74: 8251937772380507121
+    second: pince droite.001|tentaculle milieu.001Action
+  - first:
+      74: -4163427910672322940
+    second: pince droite.001|tentaculle milieu.002Action
+  - first:
+      74: -6101328799061588181
+    second: pince droite.001|tentaculle milieu.003Action
+  - first:
+      74: -5450087287612070583
+    second: pince droite.001|tentaculle milieu.004Action
+  - first:
+      74: -3901273832466250352
+    second: pince droite.001|tentaculle milieuAction.001
+  - first:
+      74: -1896633337249290221
+    second: "pince droite.001|t\xEAteAction"
+  - first:
+      74: -2336780395233514742
+    second: pince droite.001|yeux.001Action
+  - first:
+      74: -669691972824192139
+    second: pince droite.002|patte 1 droite .001Action
+  - first:
+      74: 586890721080133402
+    second: pince droite.002|patte 1 gauche.002Action.001
+  - first:
+      74: -4164324461248206427
+    second: pince droite.002|patte 2 droite.001Action
+  - first:
+      74: 4354879258281483593
+    second: pince droite.002|patte 2 gauche.001Action
+  - first:
+      74: 178142707107863114
+    second: pince droite.002|patte 3 droite.001Action
+  - first:
+      74: 5636407652533240209
+    second: pince droite.002|patte 3 gauche.001Action.001
+  - first:
+      74: 2339956127328568006
+    second: pince droite.002|patte 4 droite.001Action
+  - first:
+      74: 5958652896598948187
+    second: pince droite.002|patte 4 gauche.001Action
+  - first:
+      74: -9218578861577417313
+    second: pince droite.002|pince droite.001Action
+  - first:
+      74: -4563266594910986016
+    second: pince droite.002|pince droite.002Action
+  - first:
+      74: 4897414725140725329
+    second: pince droite.002|pince gauche.001Action
+  - first:
+      74: -4155905150593846613
+    second: pince droite.002|pince gauche.002Action
+  - first:
+      74: 3278393236639626200
+    second: pince droite.002|tenataculle droite 1Action
+  - first:
+      74: 817419777436883034
+    second: pince droite.002|tentaculle droite 2Action
+  - first:
+      74: 5328959084009324784
+    second: pince droite.002|tentaculle gauche 1Action.001
+  - first:
+      74: 1186438124500983678
+    second: pince droite.002|tentaculle gauche 2.001Action
+  - first:
+      74: 8035331302258975449
+    second: pince droite.002|tentaculle milieu.001Action
+  - first:
+      74: 2774745854248685483
+    second: pince droite.002|tentaculle milieu.002Action
+  - first:
+      74: 6822868029105911818
+    second: pince droite.002|tentaculle milieu.003Action
+  - first:
+      74: 1304446143351597179
+    second: pince droite.002|tentaculle milieu.004Action
+  - first:
+      74: -5068572489588822143
+    second: pince droite.002|tentaculle milieuAction.001
+  - first:
+      74: 78399161434344724
+    second: "pince droite.002|t\xEAteAction"
+  - first:
+      74: 1174721849816197678
+    second: pince droite.002|yeux.001Action
+  - first:
+      74: -3733140619554265836
+    second: pince gauche.001|patte 1 droite .001Action
+  - first:
+      74: 7143681378396084992
+    second: pince gauche.001|patte 1 gauche.002Action.001
+  - first:
+      74: 5976686048188839841
+    second: pince gauche.001|patte 2 droite.001Action
+  - first:
+      74: 6466432678858596508
+    second: pince gauche.001|patte 2 gauche.001Action
+  - first:
+      74: 7604233039604956790
+    second: pince gauche.001|patte 3 droite.001Action
+  - first:
+      74: 6886261058136084010
+    second: pince gauche.001|patte 3 gauche.001Action.001
+  - first:
+      74: -8463813072992085652
+    second: pince gauche.001|patte 4 droite.001Action
+  - first:
+      74: -4520680192304647422
+    second: pince gauche.001|patte 4 gauche.001Action
+  - first:
+      74: 4418600605559469436
+    second: pince gauche.001|pince droite.001Action
+  - first:
+      74: 8710278491789550936
+    second: pince gauche.001|pince droite.002Action
+  - first:
+      74: 1144272811816336224
+    second: pince gauche.001|pince gauche.001Action
+  - first:
+      74: -3362440512578783307
+    second: pince gauche.001|pince gauche.002Action
+  - first:
+      74: -6741317498879759037
+    second: pince gauche.001|tenataculle droite 1Action
+  - first:
+      74: 7319707756655276130
+    second: pince gauche.001|tentaculle droite 2Action
+  - first:
+      74: 6073005342823258765
+    second: pince gauche.001|tentaculle gauche 1Action.001
+  - first:
+      74: 8327183031732384641
+    second: pince gauche.001|tentaculle gauche 2.001Action
+  - first:
+      74: -7066340555234343827
+    second: pince gauche.001|tentaculle milieu.001Action
+  - first:
+      74: 7845577623321637125
+    second: pince gauche.001|tentaculle milieu.002Action
+  - first:
+      74: -1153008999336722244
+    second: pince gauche.001|tentaculle milieu.003Action
+  - first:
+      74: -1599215916815746494
+    second: pince gauche.001|tentaculle milieu.004Action
+  - first:
+      74: 993673371906989236
+    second: pince gauche.001|tentaculle milieuAction.001
+  - first:
+      74: -3730286128472102560
+    second: "pince gauche.001|t\xEAteAction"
+  - first:
+      74: 2458631272924791354
+    second: pince gauche.001|yeux.001Action
+  - first:
+      74: 616202659838442043
+    second: pince gauche.002|patte 1 droite .001Action
+  - first:
+      74: -8621264331764015667
+    second: pince gauche.002|patte 1 gauche.002Action.001
+  - first:
+      74: -5963851265902848455
+    second: pince gauche.002|patte 2 droite.001Action
+  - first:
+      74: 6045499451124481519
+    second: pince gauche.002|patte 2 gauche.001Action
+  - first:
+      74: -1758451095910836982
+    second: pince gauche.002|patte 3 droite.001Action
+  - first:
+      74: 5146709296100486539
+    second: pince gauche.002|patte 3 gauche.001Action.001
+  - first:
+      74: -2790804562341604774
+    second: pince gauche.002|patte 4 droite.001Action
+  - first:
+      74: 6385898041333678745
+    second: pince gauche.002|patte 4 gauche.001Action
+  - first:
+      74: 1501584374816896939
+    second: pince gauche.002|pince droite.001Action
+  - first:
+      74: 9117600468264214642
+    second: pince gauche.002|pince droite.002Action
+  - first:
+      74: 1752839583182124281
+    second: pince gauche.002|pince gauche.001Action
+  - first:
+      74: 8727307352692831006
+    second: pince gauche.002|pince gauche.002Action
+  - first:
+      74: 1315998700386553900
+    second: pince gauche.002|tenataculle droite 1Action
+  - first:
+      74: 4985405826037466742
+    second: pince gauche.002|tentaculle droite 2Action
+  - first:
+      74: -3627866533684893126
+    second: pince gauche.002|tentaculle gauche 1Action.001
+  - first:
+      74: 4873568181331795924
+    second: pince gauche.002|tentaculle gauche 2.001Action
+  - first:
+      74: -1696371484805857521
+    second: pince gauche.002|tentaculle milieu.001Action
+  - first:
+      74: -7549215580527684493
+    second: pince gauche.002|tentaculle milieu.002Action
+  - first:
+      74: -3304127951117997680
+    second: pince gauche.002|tentaculle milieu.003Action
+  - first:
+      74: 3106716434873813213
+    second: pince gauche.002|tentaculle milieu.004Action
+  - first:
+      74: -7296271658614386677
+    second: pince gauche.002|tentaculle milieuAction.001
+  - first:
+      74: 727754926586577717
+    second: "pince gauche.002|t\xEAteAction"
+  - first:
+      74: 4551864625185515511
+    second: pince gauche.002|yeux.001Action
+  - first:
+      74: -6809265119709361900
+    second: patte 1 gauche.001|patte 1 droite .001Action
+  - first:
+      74: 3754705543450464289
+    second: patte 1 gauche.001|patte 1 gauche.002Action.001
+  - first:
+      74: -5142088396663801069
+    second: patte 1 gauche.001|patte 2 droite.001Action
+  - first:
+      74: -3664985506413954684
+    second: patte 1 gauche.001|patte 2 gauche.001Action
+  - first:
+      74: -9004958123016496570
+    second: patte 1 gauche.001|patte 3 droite.001Action
+  - first:
+      74: 921444568739284416
+    second: patte 1 gauche.001|patte 3 gauche.001Action.001
+  - first:
+      74: 1578948218090115402
+    second: patte 1 gauche.001|patte 4 droite.001Action
+  - first:
+      74: 6490277067188187564
+    second: patte 1 gauche.001|patte 4 gauche.001Action
+  - first:
+      74: 3734696229567458848
+    second: patte 1 gauche.001|pince droite.001Action
+  - first:
+      74: -1521651160780012116
+    second: patte 1 gauche.001|pince droite.002Action
+  - first:
+      74: 8928435621596891186
+    second: patte 1 gauche.001|pince gauche.001Action
+  - first:
+      74: -1108765548712638951
+    second: patte 1 gauche.001|pince gauche.002Action
+  - first:
+      74: -4497713184452078159
+    second: patte 1 gauche.001|tenataculle droite 1Action
+  - first:
+      74: 2651674415694384856
+    second: patte 1 gauche.001|tentaculle droite 2Action
+  - first:
+      74: -2233521227946661594
+    second: patte 1 gauche.001|tentaculle gauche 1Action.001
+  - first:
+      74: 9048488828814859031
+    second: patte 1 gauche.001|tentaculle gauche 2.001Action
+  - first:
+      74: -2596436421553866226
+    second: patte 1 gauche.001|tentaculle milieu.001Action
+  - first:
+      74: 132881692600743606
+    second: patte 1 gauche.001|tentaculle milieu.002Action
+  - first:
+      74: 5791074896072299927
+    second: patte 1 gauche.001|tentaculle milieu.003Action
+  - first:
+      74: 2877598237413439930
+    second: patte 1 gauche.001|tentaculle milieu.004Action
+  - first:
+      74: -7954148900269240156
+    second: patte 1 gauche.001|tentaculle milieuAction.001
+  - first:
+      74: 3507405486421219294
+    second: "patte 1 gauche.001|t\xEAteAction"
+  - first:
+      74: 7010807231642451414
+    second: patte 1 gauche.001|yeux.001Action
+  - first:
+      74: -4914602249426670323
+    second: patte 2 gauche.001|patte 1 droite .001Action
+  - first:
+      74: 7935224936333917870
+    second: patte 2 gauche.001|patte 1 gauche.002Action.001
+  - first:
+      74: -4947465098302361274
+    second: patte 2 gauche.001|patte 2 droite.001Action
+  - first:
+      74: 4862649164281040241
+    second: patte 2 gauche.001|patte 2 gauche.001Action
+  - first:
+      74: 8228325563398891526
+    second: patte 2 gauche.001|patte 3 droite.001Action
+  - first:
+      74: 5090210179149611678
+    second: patte 2 gauche.001|patte 3 gauche.001Action.001
+  - first:
+      74: 5015967697414140955
+    second: patte 2 gauche.001|patte 4 droite.001Action
+  - first:
+      74: -5760052250605321696
+    second: patte 2 gauche.001|patte 4 gauche.001Action
+  - first:
+      74: -1683620070583430949
+    second: patte 2 gauche.001|pince droite.001Action
+  - first:
+      74: -2276130033703101399
+    second: patte 2 gauche.001|pince droite.002Action
+  - first:
+      74: -5402005600573924464
+    second: patte 2 gauche.001|pince gauche.001Action
+  - first:
+      74: -211441596092521654
+    second: patte 2 gauche.001|pince gauche.002Action
+  - first:
+      74: -6125752203100109045
+    second: patte 2 gauche.001|tenataculle droite 1Action
+  - first:
+      74: 7620221597996875067
+    second: patte 2 gauche.001|tentaculle droite 2Action
+  - first:
+      74: 4699246962559621054
+    second: patte 2 gauche.001|tentaculle gauche 1Action.001
+  - first:
+      74: 2333352959200299987
+    second: patte 2 gauche.001|tentaculle gauche 2.001Action
+  - first:
+      74: -7233475446222794061
+    second: patte 2 gauche.001|tentaculle milieu.001Action
+  - first:
+      74: -2614094604193050330
+    second: patte 2 gauche.001|tentaculle milieu.002Action
+  - first:
+      74: -98184837667184592
+    second: patte 2 gauche.001|tentaculle milieu.003Action
+  - first:
+      74: 2489814117410717811
+    second: patte 2 gauche.001|tentaculle milieu.004Action
+  - first:
+      74: -6563251994485827834
+    second: patte 2 gauche.001|tentaculle milieuAction.001
+  - first:
+      74: -2822503158472032564
+    second: "patte 2 gauche.001|t\xEAteAction"
+  - first:
+      74: -735981923668986011
+    second: patte 2 gauche.001|yeux.001Action
+  - first:
+      74: 6471963101864374548
+    second: patte 1 gauche.002|patte 1 droite .001Action
+  - first:
+      74: 1512728043043374568
+    second: patte 1 gauche.002|patte 1 gauche.002Action.001
+  - first:
+      74: 5846755512079217938
+    second: patte 1 gauche.002|patte 2 droite.001Action
+  - first:
+      74: 7692491639734184341
+    second: patte 1 gauche.002|patte 2 gauche.001Action
+  - first:
+      74: 137013877407218940
+    second: patte 1 gauche.002|patte 3 droite.001Action
+  - first:
+      74: -3615465994598334782
+    second: patte 1 gauche.002|patte 3 gauche.001Action.001
+  - first:
+      74: 5219139218480672039
+    second: patte 1 gauche.002|patte 4 droite.001Action
+  - first:
+      74: 1361980086268168709
+    second: patte 1 gauche.002|patte 4 gauche.001Action
+  - first:
+      74: 5910982579511057562
+    second: patte 1 gauche.002|pince droite.001Action
+  - first:
+      74: 2523936621528514119
+    second: patte 1 gauche.002|pince droite.002Action
+  - first:
+      74: -5300880912732026742
+    second: patte 1 gauche.002|pince gauche.001Action
+  - first:
+      74: 5838697920634353692
+    second: patte 1 gauche.002|pince gauche.002Action
+  - first:
+      74: -7645855772998989481
+    second: patte 1 gauche.002|tenataculle droite 1Action
+  - first:
+      74: -5170457304871318596
+    second: patte 1 gauche.002|tentaculle droite 2Action
+  - first:
+      74: 5146065194271012320
+    second: patte 1 gauche.002|tentaculle gauche 1Action.001
+  - first:
+      74: -1780593737282360742
+    second: patte 1 gauche.002|tentaculle gauche 2.001Action
+  - first:
+      74: -6662156410661130870
+    second: patte 1 gauche.002|tentaculle milieu.001Action
+  - first:
+      74: 2874759082271999053
+    second: patte 1 gauche.002|tentaculle milieu.002Action
+  - first:
+      74: 1485064371462522449
+    second: patte 1 gauche.002|tentaculle milieu.003Action
+  - first:
+      74: 603690673026785354
+    second: patte 1 gauche.002|tentaculle milieu.004Action
+  - first:
+      74: 2018794662138136428
+    second: patte 1 gauche.002|tentaculle milieuAction.001
+  - first:
+      74: -2169093006656825655
+    second: "patte 1 gauche.002|t\xEAteAction"
+  - first:
+      74: -4471819057743653533
+    second: patte 1 gauche.002|yeux.001Action
+  - first:
+      74: -820121572009310182
+    second: patte 3 gauche.001|patte 1 droite .001Action
+  - first:
+      74: -3624605248658306226
+    second: patte 3 gauche.001|patte 1 gauche.002Action.001
+  - first:
+      74: 8946431387040815072
+    second: patte 3 gauche.001|patte 2 droite.001Action
+  - first:
+      74: 9222678149728580011
+    second: patte 3 gauche.001|patte 2 gauche.001Action
+  - first:
+      74: -3562981749171213147
+    second: patte 3 gauche.001|patte 3 droite.001Action
+  - first:
+      74: 4497724605829602470
+    second: patte 3 gauche.001|patte 3 gauche.001Action.001
+  - first:
+      74: 5255658578113792779
+    second: patte 3 gauche.001|patte 4 droite.001Action
+  - first:
+      74: -3949258104816598206
+    second: patte 3 gauche.001|patte 4 gauche.001Action
+  - first:
+      74: 6562682340014916995
+    second: patte 3 gauche.001|pince droite.001Action
+  - first:
+      74: -5584591807605667189
+    second: patte 3 gauche.001|pince droite.002Action
+  - first:
+      74: -6491577713782635838
+    second: patte 3 gauche.001|pince gauche.001Action
+  - first:
+      74: -7906283096822013662
+    second: patte 3 gauche.001|pince gauche.002Action
+  - first:
+      74: 787931387972514283
+    second: patte 3 gauche.001|tenataculle droite 1Action
+  - first:
+      74: -7612823341072297684
+    second: patte 3 gauche.001|tentaculle droite 2Action
+  - first:
+      74: 6721370962295276952
+    second: patte 3 gauche.001|tentaculle gauche 1Action.001
+  - first:
+      74: -3954590481689786951
+    second: patte 3 gauche.001|tentaculle gauche 2.001Action
+  - first:
+      74: 7147088458925115684
+    second: patte 3 gauche.001|tentaculle milieu.001Action
+  - first:
+      74: -666235293698407099
+    second: patte 3 gauche.001|tentaculle milieu.002Action
+  - first:
+      74: -6121238072928413445
+    second: patte 3 gauche.001|tentaculle milieu.003Action
+  - first:
+      74: -6403623638779102741
+    second: patte 3 gauche.001|tentaculle milieu.004Action
+  - first:
+      74: 5748571795332791525
+    second: patte 3 gauche.001|tentaculle milieuAction.001
+  - first:
+      74: 2278957337933828762
+    second: "patte 3 gauche.001|t\xEAteAction"
+  - first:
+      74: 3800387359932432895
+    second: patte 3 gauche.001|yeux.001Action
+  - first:
+      74: -8585927512218243508
+    second: patte 4 gauche.001|patte 1 droite .001Action
+  - first:
+      74: 287028811601056869
+    second: patte 4 gauche.001|patte 1 gauche.002Action.001
+  - first:
+      74: -3550052363360079910
+    second: patte 4 gauche.001|patte 2 droite.001Action
+  - first:
+      74: -8057008719273800167
+    second: patte 4 gauche.001|patte 2 gauche.001Action
+  - first:
+      74: -1115965981075770877
+    second: patte 4 gauche.001|patte 3 droite.001Action
+  - first:
+      74: -7933690153848666418
+    second: patte 4 gauche.001|patte 3 gauche.001Action.001
+  - first:
+      74: 8305002626134048327
+    second: patte 4 gauche.001|patte 4 droite.001Action
+  - first:
+      74: -4162735462619559264
+    second: patte 4 gauche.001|patte 4 gauche.001Action
+  - first:
+      74: 750440608619479380
+    second: patte 4 gauche.001|pince droite.001Action
+  - first:
+      74: 4727989482985924313
+    second: patte 4 gauche.001|pince droite.002Action
+  - first:
+      74: -131767097178580355
+    second: patte 4 gauche.001|pince gauche.001Action
+  - first:
+      74: 8415772465096462093
+    second: patte 4 gauche.001|pince gauche.002Action
+  - first:
+      74: 1506942186616005608
+    second: patte 4 gauche.001|tenataculle droite 1Action
+  - first:
+      74: 8374575422163614207
+    second: patte 4 gauche.001|tentaculle droite 2Action
+  - first:
+      74: 4912871969449371998
+    second: patte 4 gauche.001|tentaculle gauche 1Action.001
+  - first:
+      74: 3133947470868422147
+    second: patte 4 gauche.001|tentaculle gauche 2.001Action
+  - first:
+      74: 3626243162621662849
+    second: patte 4 gauche.001|tentaculle milieu.001Action
+  - first:
+      74: -5860516541214475492
+    second: patte 4 gauche.001|tentaculle milieu.002Action
+  - first:
+      74: 3308419615946036511
+    second: patte 4 gauche.001|tentaculle milieu.003Action
+  - first:
+      74: 5333871303832044841
+    second: patte 4 gauche.001|tentaculle milieu.004Action
+  - first:
+      74: -3480648790680655086
+    second: patte 4 gauche.001|tentaculle milieuAction.001
+  - first:
+      74: -9161303476697473343
+    second: "patte 4 gauche.001|t\xEAteAction"
+  - first:
+      74: -9071583038992929047
+    second: patte 4 gauche.001|yeux.001Action
+  - first:
+      74: -8227663482934442133
+    second: patte 1 droite .001|patte 1 droite .001Action
+  - first:
+      74: 895198413668076911
+    second: patte 1 droite .001|patte 1 gauche.002Action.001
+  - first:
+      74: 4840421417189286860
+    second: patte 1 droite .001|patte 2 droite.001Action
+  - first:
+      74: -3392301759816704894
+    second: patte 1 droite .001|patte 2 gauche.001Action
+  - first:
+      74: -5291436066026461735
+    second: patte 1 droite .001|patte 3 droite.001Action
+  - first:
+      74: -5257578386019306701
+    second: patte 1 droite .001|patte 3 gauche.001Action.001
+  - first:
+      74: -216937240572064273
+    second: patte 1 droite .001|patte 4 droite.001Action
+  - first:
+      74: -3497159687380991391
+    second: patte 1 droite .001|patte 4 gauche.001Action
+  - first:
+      74: -7096363824836540568
+    second: patte 1 droite .001|pince droite.001Action
+  - first:
+      74: 8991402509951098544
+    second: patte 1 droite .001|pince droite.002Action
+  - first:
+      74: -6743284789342693549
+    second: patte 1 droite .001|pince gauche.001Action
+  - first:
+      74: 4362580081478440662
+    second: patte 1 droite .001|pince gauche.002Action
+  - first:
+      74: 5888261027472893312
+    second: patte 1 droite .001|tenataculle droite 1Action
+  - first:
+      74: 820871621510015844
+    second: patte 1 droite .001|tentaculle droite 2Action
+  - first:
+      74: 3210083213168529925
+    second: patte 1 droite .001|tentaculle gauche 1Action.001
+  - first:
+      74: -3173145636077145023
+    second: patte 1 droite .001|tentaculle gauche 2.001Action
+  - first:
+      74: -3753318886252173326
+    second: patte 1 droite .001|tentaculle milieu.001Action
+  - first:
+      74: 8826818679937014875
+    second: patte 1 droite .001|tentaculle milieu.002Action
+  - first:
+      74: -5321202735546193526
+    second: patte 1 droite .001|tentaculle milieu.003Action
+  - first:
+      74: 8152810092352703159
+    second: patte 1 droite .001|tentaculle milieu.004Action
+  - first:
+      74: 2431505441908592411
+    second: patte 1 droite .001|tentaculle milieuAction.001
+  - first:
+      74: -7316810242812031402
+    second: "patte 1 droite .001|t\xEAteAction"
+  - first:
+      74: 8979510897864920584
+    second: patte 1 droite .001|yeux.001Action
+  - first:
+      74: -6718154596269127979
+    second: patte 2 droite.001|patte 1 droite .001Action
+  - first:
+      74: 7397070155631905018
+    second: patte 2 droite.001|patte 1 gauche.002Action.001
+  - first:
+      74: 1954257012159808363
+    second: patte 2 droite.001|patte 2 droite.001Action
+  - first:
+      74: -1107751362678717939
+    second: patte 2 droite.001|patte 2 gauche.001Action
+  - first:
+      74: 8895003443538707216
+    second: patte 2 droite.001|patte 3 droite.001Action
+  - first:
+      74: 9147773645111515054
+    second: patte 2 droite.001|patte 3 gauche.001Action.001
+  - first:
+      74: -5215520841672292311
+    second: patte 2 droite.001|patte 4 droite.001Action
+  - first:
+      74: 3143874076970065866
+    second: patte 2 droite.001|patte 4 gauche.001Action
+  - first:
+      74: -9018857223333772505
+    second: patte 2 droite.001|pince droite.001Action
+  - first:
+      74: 4275026318411717654
+    second: patte 2 droite.001|pince droite.002Action
+  - first:
+      74: -8820574132067090611
+    second: patte 2 droite.001|pince gauche.001Action
+  - first:
+      74: -981241866916372848
+    second: patte 2 droite.001|pince gauche.002Action
+  - first:
+      74: -6255951524604327821
+    second: patte 2 droite.001|tenataculle droite 1Action
+  - first:
+      74: -5286290436011298216
+    second: patte 2 droite.001|tentaculle droite 2Action
+  - first:
+      74: 2485189055846673892
+    second: patte 2 droite.001|tentaculle gauche 1Action.001
+  - first:
+      74: -6108206210264055230
+    second: patte 2 droite.001|tentaculle gauche 2.001Action
+  - first:
+      74: 3948926814129457140
+    second: patte 2 droite.001|tentaculle milieu.001Action
+  - first:
+      74: 7145087622486527263
+    second: patte 2 droite.001|tentaculle milieu.002Action
+  - first:
+      74: 7793024098676539002
+    second: patte 2 droite.001|tentaculle milieu.003Action
+  - first:
+      74: -4842970898005578448
+    second: patte 2 droite.001|tentaculle milieu.004Action
+  - first:
+      74: 7030723617297853828
+    second: patte 2 droite.001|tentaculle milieuAction.001
+  - first:
+      74: -7386357739928425926
+    second: "patte 2 droite.001|t\xEAteAction"
+  - first:
+      74: 410033729471271051
+    second: patte 2 droite.001|yeux.001Action
+  - first:
+      74: 155957393414937983
+    second: patte 3 droite.001|patte 1 droite .001Action
+  - first:
+      74: 5514254126843337882
+    second: patte 3 droite.001|patte 1 gauche.002Action.001
+  - first:
+      74: 7445026425991430114
+    second: patte 3 droite.001|patte 2 droite.001Action
+  - first:
+      74: -559900134082552070
+    second: patte 3 droite.001|patte 2 gauche.001Action
+  - first:
+      74: 5763945498815431332
+    second: patte 3 droite.001|patte 3 droite.001Action
+  - first:
+      74: 4559801688541611532
+    second: patte 3 droite.001|patte 3 gauche.001Action.001
+  - first:
+      74: -1565657793894222947
+    second: patte 3 droite.001|patte 4 droite.001Action
+  - first:
+      74: 8137687215441074346
+    second: patte 3 droite.001|patte 4 gauche.001Action
+  - first:
+      74: -8461373032585171770
+    second: patte 3 droite.001|pince droite.001Action
+  - first:
+      74: -5126565621010478891
+    second: patte 3 droite.001|pince droite.002Action
+  - first:
+      74: -3904052895543902740
+    second: patte 3 droite.001|pince gauche.001Action
+  - first:
+      74: -2152020966227405954
+    second: patte 3 droite.001|pince gauche.002Action
+  - first:
+      74: -1487340127886753910
+    second: patte 3 droite.001|tenataculle droite 1Action
+  - first:
+      74: 4407049331390855713
+    second: patte 3 droite.001|tentaculle droite 2Action
+  - first:
+      74: -6323018526586664702
+    second: patte 3 droite.001|tentaculle gauche 1Action.001
+  - first:
+      74: 1145731130183413105
+    second: patte 3 droite.001|tentaculle gauche 2.001Action
+  - first:
+      74: 3144521061425246823
+    second: patte 3 droite.001|tentaculle milieu.001Action
+  - first:
+      74: 150850626109965868
+    second: patte 3 droite.001|tentaculle milieu.002Action
+  - first:
+      74: -3238656919977636147
+    second: patte 3 droite.001|tentaculle milieu.003Action
+  - first:
+      74: -2430655513285123638
+    second: patte 3 droite.001|tentaculle milieu.004Action
+  - first:
+      74: 9198250095522234150
+    second: patte 3 droite.001|tentaculle milieuAction.001
+  - first:
+      74: 4436813381204208784
+    second: "patte 3 droite.001|t\xEAteAction"
+  - first:
+      74: 495696914191162730
+    second: patte 3 droite.001|yeux.001Action
+  - first:
+      74: 3339559781418110527
+    second: patte 4 droite.001|patte 1 droite .001Action
+  - first:
+      74: 2598601754189026911
+    second: patte 4 droite.001|patte 1 gauche.002Action.001
+  - first:
+      74: -1738184624024764659
+    second: patte 4 droite.001|patte 2 droite.001Action
+  - first:
+      74: 2802324717692773657
+    second: patte 4 droite.001|patte 2 gauche.001Action
+  - first:
+      74: 3827430797286426478
+    second: patte 4 droite.001|patte 3 droite.001Action
+  - first:
+      74: -238073376464876078
+    second: patte 4 droite.001|patte 3 gauche.001Action.001
+  - first:
+      74: 7887742995139096215
+    second: patte 4 droite.001|patte 4 droite.001Action
+  - first:
+      74: 4437476202817502497
+    second: patte 4 droite.001|patte 4 gauche.001Action
+  - first:
+      74: -6225700415531846422
+    second: patte 4 droite.001|pince droite.001Action
+  - first:
+      74: 3809301334173109302
+    second: patte 4 droite.001|pince droite.002Action
+  - first:
+      74: -762715374960070002
+    second: patte 4 droite.001|pince gauche.001Action
+  - first:
+      74: 5091960494234641477
+    second: patte 4 droite.001|pince gauche.002Action
+  - first:
+      74: -346786919520470931
+    second: patte 4 droite.001|tenataculle droite 1Action
+  - first:
+      74: -995706073366810547
+    second: patte 4 droite.001|tentaculle droite 2Action
+  - first:
+      74: -133641733159557187
+    second: patte 4 droite.001|tentaculle gauche 1Action.001
+  - first:
+      74: -4456916525831780224
+    second: patte 4 droite.001|tentaculle gauche 2.001Action
+  - first:
+      74: 4311778273719907606
+    second: patte 4 droite.001|tentaculle milieu.001Action
+  - first:
+      74: 7815993668120889226
+    second: patte 4 droite.001|tentaculle milieu.002Action
+  - first:
+      74: -4737661046351271068
+    second: patte 4 droite.001|tentaculle milieu.003Action
+  - first:
+      74: 6995246016807521855
+    second: patte 4 droite.001|tentaculle milieu.004Action
+  - first:
+      74: 8270253155499214671
+    second: patte 4 droite.001|tentaculle milieuAction.001
+  - first:
+      74: -7366855775468733871
+    second: "patte 4 droite.001|t\xEAteAction"
+  - first:
+      74: -2578949488931682472
+    second: patte 4 droite.001|yeux.001Action
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
