@@ -63,30 +63,25 @@ public class Player : MonoBehaviour
         spriteCD = 0.02f;
         gameOver = true;
         nbAncreToSpew = 5;
+        //cameraPlayer. = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
     void Update()
     {
         mousePosition = Input.mousePosition;
-        if (!isDead)
-        {
-            Rotation();
-            Propulsion();
-            CameraSetPosition();
-            PlayerSetScale();
-            JetDancre();
-            SetPlayerAncre();
-            FixNegatifExp();
-        }
-        if (isDead)
-        {
-            Die();
-        }
         
+        Rotation();
+        Propulsion();
+        CameraSetPosition();
+        PlayerSetScale();
+        JetDancre();
+        SetPlayerAncre();
+        FixNegatifExp();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
         cameraPlayer.transform.position = new Vector3(transform.position.x, transform.position.y+cameraHauteur,cameraDistance);
         rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);  
+        
     }
     void FixedUpdate()
     {
@@ -147,7 +142,7 @@ public class Player : MonoBehaviour
     }
     public void JetDancre()
     {
-        if (Input.GetButtonDown("Ancre")&& ancreReserve > ancreConsume)
+        if (Input.GetButtonDown("Fire3")&& ancreReserve > ancreConsume)
         {
             canShoot = true;
             ancreReserve -= ancreConsume;
