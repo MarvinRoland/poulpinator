@@ -41,10 +41,11 @@ public class Crabe : MonoBehaviour
         savedTimeJump = Time.time;
         isBulleAttaque = true;
         isChasse = true;
+        estActif = false;
     }
 
     // Update is called once per frame
-    async void Update()
+    public void Update()
     {      
         if (estActif)
         {
@@ -55,6 +56,10 @@ public class Crabe : MonoBehaviour
             Moove();
             Knoc();
             
+        }
+        else 
+        {
+            savedTimeJump = Time.time;
         }
         if (crabePointDeVie <= 0)
         {
