@@ -364,7 +364,7 @@ public class Player : MonoBehaviour
         {
         case 0:
             playerDamage = 0;
-            playerPropulsionForce = 10;
+            playerPropulsionForce = 3;
             canSpike = false;
         break;
         default:
