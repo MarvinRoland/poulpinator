@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField] public float cameraDistance, cameraHauteur;
     [SerializeField] GameObject ancreObject;
     [SerializeField] GameObject tentacle;
+    [SerializeField] GameObject spikeObject;
     bool isDead = false;
     bool isCameraGoFar = false;
     bool isSpike = false;
@@ -382,7 +383,7 @@ public class Player : MonoBehaviour
     }
     public void TentacleAttaque()
     {
-        if (Input.GetButtonDown("Ancre"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Quaternion myrot = this.transform.rotation;
             myrot.z += 180;
@@ -395,10 +396,12 @@ public class Player : MonoBehaviour
     {
         if(canSpike && Time.time > savedTimeSpikeAttaque + spikeCD)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire2"))
             {
                 isSpike = true;
-                //joue animationspike
+                GameObject pique = Instantiate(spikeObject, transform.position, transform.rotation);
+                savedTimeSpikeAttaque = Time.time;
+                
             }
             
         }

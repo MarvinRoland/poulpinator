@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     bool isBlind;
     [SerializeField]public float blindtime;
     float savedBlindTime;
+    float savedTimeKnok;
+    public float knokCD;
     
     int chases;
     // Start is called before the first frame update
@@ -31,30 +33,43 @@ public class Enemy : MonoBehaviour
         savedTimeProp = Time.time;
         savedBlindTime = Time.time;
         isBlind = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        propCD = 0.5f;
-        target = GameObject.Find("Player Boddy");
-        targetPosition = GameObject.Find("Player Boddy").transform.position;
-        
-        //rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);  
-        rb.velocity -= deceleration*rb.velocity* Time.deltaTime;
-        if (!isBlind)
+        if (!isKnoc)
         {
-            EnemySetChasse();
+            propCD = 0.5f;
+            target = GameObject.Find("Player Boddy");
+            targetPosition = GameObject.Find("Player Boddy").transform.position;
+
+            //rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);  
+            rb.velocity -= deceleration * rb.velocity * Time.deltaTime;
+            if (!isBlind)
+            {
+                EnemySetChasse();
+            }
+            if (isBlind)
+            {
+                PropulsionEnemy();
+            }
+            if (Time.time > savedBlindTime + blindtime)
+            {
+                isBlind = false;
+            }
+            Debug.Log(chases);
         }
-        if(isBlind)
+        else
         {
-            PropulsionEnemy();
+            if(Time.time > savedTimeKnok + knokCD) 
+            {
+                isKnoc = false;
+                savedTimeKnok = Time.time;
+                
+            }
         }
-        if(Time.time > savedBlindTime + blindtime)
-        {
-            isBlind = false;
-        }
-        Debug.Log(chases);
 
     }
     private void OnTriggerEnter(Collider other)
@@ -66,6 +81,11 @@ public class Enemy : MonoBehaviour
             savedBlindTime = Time.time;
             //other.gameObject.transform.position = this.transform.position;
             //other.transform.localScale = new Vector3(1,1,1);
+        }
+        if (other.tag == "WallStun")
+        {
+            isKnoc = true;
+            savedTimeKnok = Time.time;
         }
     }
     public void Propulsion()

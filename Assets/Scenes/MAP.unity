@@ -6687,6 +6687,7 @@ MonoBehaviour:
   cameraHauteur: 5
   ancreObject: {fileID: 3878242136021434201, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}
   tentacle: {fileID: 0}
+  spikeObject: {fileID: 0}
   disCam: 0
   sizeUp: {x: 0, y: 0, z: 0}
 --- !u!1 &835030265
@@ -16714,6 +16715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grand poisson
       objectReference: {fileID: 0}
+    - target: {fileID: 576095884459518111, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 915748647662416421, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16732,7 +16737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 915748647662416421, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1304.4
+      value: 1300.6
       objectReference: {fileID: 0}
     - target: {fileID: 915748647662416421, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16770,8 +16775,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1223104558815389136, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
+      propertyPath: knokCD
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 1742994563148355097, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
       propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742994563148355097, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6319315471380594801, guid: 869288e996a014a4eb3538d5496f28cd, type: 3}

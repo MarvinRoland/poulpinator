@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1223104558815389136}
   - component: {fileID: 6319315471380594801}
   - component: {fileID: 1742994563148355097}
+  - component: {fileID: 8763488588033420454}
   m_Layer: 0
   m_Name: grand poisson
   m_TagString: Untagged
@@ -148,5 +149,19 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7877892693871440278, guid: 3b96f5e018108ee44b40dbc361dec638, type: 3}
+--- !u!64 &8763488588033420454
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576095884459518111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7877892693871440278, guid: 3b96f5e018108ee44b40dbc361dec638, type: 3}
