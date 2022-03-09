@@ -4973,7 +4973,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   coll: {fileID: 0}
-  blindtime: 0
+  blindtime: 5
 --- !u!65 &677890332
 BoxCollider:
   m_ObjectHideFlags: 0
