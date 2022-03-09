@@ -61,9 +61,11 @@ public class Enemy : MonoBehaviour
     {
         if(other.tag == "Ancre")
         {
+            Vector3 origineScal = other.transform.localScale;
             isBlind = true;
             savedBlindTime = Time.time;
-            other.gameObject.transform.SetParent(transform);
+            other.gameObject.transform.parent = this.transform;
+            other.transform.localScale = origineScal;
         }
     }
     public void Propulsion()

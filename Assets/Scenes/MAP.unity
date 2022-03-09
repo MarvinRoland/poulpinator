@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 98197395}
   m_Layer: 0
   m_Name: Ancre
-  m_TagString: Untagged
+  m_TagString: Ancre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1920,7 +1920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269568752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1369, y: 40.3, z: -15}
+  m_LocalPosition: {x: 1322.8, y: 73.8, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831502695}
@@ -5045,7 +5045,7 @@ Transform:
   m_GameObject: {fileID: 677890330}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1287.4, y: 78.4, z: -29.6}
-  m_LocalScale: {x: 5, y: 5, z: 12}
+  m_LocalScale: {x: 1, y: 5, z: 12}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -15900,6 +15900,10 @@ PrefabInstance:
     - target: {fileID: 3878242136021434201, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}
       propertyPath: m_Name
       value: encrenoir
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878242136021434201, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}
+      propertyPath: m_TagString
+      value: Ancre
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ede27f8196fc7d841b2631291b6a2232, type: 3}

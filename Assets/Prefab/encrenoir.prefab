@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3878242136021434202}
   - component: {fileID: 3878242136021434203}
   - component: {fileID: 3878242136021434181}
+  - component: {fileID: 3137933167310479285}
   m_Layer: 0
   m_Name: encrenoir
-  m_TagString: Untagged
+  m_TagString: Ancre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +115,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   propulsionForce: 0
+  timeExist: 0
+  decraseSpeed: 0
   degat: 0
   degatsCD: 0
   savedTimeDegat: 0
+  savedTimeExist: 0
   isToxic: 0
+--- !u!65 &3137933167310479285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878242136021434201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.85, y: 3.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
