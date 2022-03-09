@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float propulsionForce, deceleration;
-    bool isKnoc = false;
+    public bool isKnoc = false;
     public int pointDeVie;
     public float speed;
     public bool isPredateur = true;
