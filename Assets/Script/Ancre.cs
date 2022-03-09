@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Ancre : MonoBehaviour
 {
-    public float speed, propulsionForce, timeExist, decraseSpeed;
+    public float speed, propulsionForce, timeExist, decraseSpeed, stcd;
     public float degat;
-    public float degatsCD, savedTimeDegat, savedTimeExist;
+    public float degatsCD, savedTimeDegat, savedTimeExist, st;
     public bool isToxic;
     private Rigidbody rb;
     Vector3 v3Force;
@@ -16,6 +16,8 @@ public class Ancre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        st = Time.time;
+        stcd = 5;
         savedTimeExist = Time.time;
         rb = this.gameObject.GetComponent<Rigidbody>();
         savedTimeDegat = Time.time;
@@ -40,6 +42,9 @@ public class Ancre : MonoBehaviour
             color.a = Mathf.Lerp (color.a, 0.0f, 1.0f*Time.deltaTime);
             sprite.color = color;
         }
-        
+        if(Time.time > st + stcd)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         }
         if(isBlind)
         {
-            Propulsion();
+            PropulsionEnemy();
         }
         if(Time.time > savedBlindTime + blindtime)
         {
@@ -64,8 +64,8 @@ public class Enemy : MonoBehaviour
             Vector3 origineScal = other.transform.localScale;
             isBlind = true;
             savedBlindTime = Time.time;
-            other.gameObject.transform.parent = this.transform;
-            other.transform.localScale = origineScal;
+            //other.gameObject.transform.position = this.transform.position;
+            //other.transform.localScale = new Vector3(1,1,1);
         }
     }
     public void Propulsion()
