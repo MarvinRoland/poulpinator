@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/marvin MenuD\xE9marage.unity"
+    guid: c10e5fa5bbef4a6488aa3dd435aa43af
+  - enabled: 1
+    path: Assets/Scenes/MAP.unity
+    guid: 306e6c5f9f5a501498dab891422996cc
   m_configObjects: {}
