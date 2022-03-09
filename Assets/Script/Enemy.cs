@@ -18,20 +18,53 @@ public class Enemy : MonoBehaviour
     public GameObject target;
     public Vector3 targetPosition;
     public Collider coll;
+    float savedTimeProp, propCD;
+    bool isBlind;
+    [SerializeField]public float blindtime;
+    float savedBlindTime;
+    
     int chases;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
+        savedTimeProp = Time.time;
+        savedBlindTime = Time.time;
+        isBlind = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        propCD = 0.5f;
         target = GameObject.Find("Player Boddy");
         targetPosition = GameObject.Find("Player Boddy").transform.position;
-        EnemySetChasse();
+        
+        //rb.AddForce(new Vector3(0,-1*Time.deltaTime,0),ForceMode.VelocityChange);  
+        rb.velocity -= deceleration*rb.velocity* Time.deltaTime;
+        if (!isBlind)
+        {
+            EnemySetChasse();
+        }
+        if(isBlind)
+        {
+            Propulsion();
+        }
+        if(Time.time > savedBlindTime + blindtime)
+        {
+            isBlind = false;
+        }
+        Debug.Log(chases);
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Ancre")
+        {
+            isBlind = true;
+            savedBlindTime = Time.time;
+            other.gameObject.transform.SetParent(transform);
+        }
     }
     public void Propulsion()
     {
@@ -50,29 +83,43 @@ public class Enemy : MonoBehaviour
     }
     public void EnemySetChasse()
     {        
-        if(transform.localScale.magnitude <= target.transform.localScale.magnitude*0.7f)
+        if(transform.localScale.magnitude <= target.transform.localScale.magnitude)
         {
             isChasse = false;
             isFlee = true;
-            chases = 1;
+            chases = -1;
             if (Vector3.Distance(transform.position, target.transform.position) < aggroRange)
             {
-                Chasse(chases);
+                Chasse();
+                PropulsionEnemy();
             }
         } 
         else
         {
             isChasse = true;
             isFlee = false;
-            chases = -1;
+            chases = 1;
             if (Vector3.Distance(transform.position, target.transform.position) < aggroRange)
             {
-                Chasse(chases);
+                Chasse();
+                PropulsionEnemy();
             }
         }
     }
-    public void Chasse(int chases)
+    public void Chasse()
     {
-        transform.LookAt(target.transform, transform.forward * Time.deltaTime * speed*chases);
+        transform.LookAt(target.transform, transform.forward); //* Time.deltaTime * speed*chases
+        
     }
+    public void PropulsionEnemy()
+    {
+        if (Time.time > savedTimeProp + propCD)
+        {
+            v3Force = propulsionForce * transform.forward*chases;        
+            rb.AddForce(v3Force,ForceMode.Impulse);
+            savedTimeProp = Time.time;
+        }
+        
+    }
+
 }

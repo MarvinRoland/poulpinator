@@ -128,14 +128,13 @@ public class Player : MonoBehaviour
         {
             ancreReserve = ancreReserveMax;
         }
-        Debug.Log(ancreReserve + "ancre");
+        
     }
     public void Propulsion()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            v3Force = playerPropulsionForce * transform.up;
-            Debug.Log("propulse");
+            v3Force = playerPropulsionForce * transform.up;            
             rb.AddForce(v3Force,ForceMode.Impulse);
             
         }
@@ -316,7 +315,7 @@ public class Player : MonoBehaviour
         switch (forceToxic)
         {
         case 0:
-        Debug.Log("setstat");
+        
             
             tentacleIsToxic = false;
             ancrePuissanceDePropulsion = 10;
