@@ -5,10 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float propulsionForce, deceleration;
-    public bool isKnoc = false;
+    bool isKnoc = false;
     public int pointDeVie;
     public float speed;
     public bool isPredateur = true;
+    public float aggroRange;
     private Rigidbody rb;
     Vector3 v3Force;
     private bool canPropulse;
@@ -16,6 +17,8 @@ public class Enemy : MonoBehaviour
     public bool isFlee;
     public GameObject target;
     public Vector3 targetPosition;
+    public Collider coll;
+    int chases;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,25 @@ public class Enemy : MonoBehaviour
         {
             isChasse = false;
             isFlee = true;
+            chases = 1;
+            if (Vector3.Distance(transform.position, target.transform.position) < aggroRange)
+            {
+                Chasse(chases);
+            }
         } 
+        else
+        {
+            isChasse = true;
+            isFlee = false;
+            chases = -1;
+            if (Vector3.Distance(transform.position, target.transform.position) < aggroRange)
+            {
+                Chasse(chases);
+            }
+        }
+    }
+    public void Chasse(int chases)
+    {
+        transform.LookAt(target.transform, transform.forward * Time.deltaTime * speed*chases);
     }
 }
