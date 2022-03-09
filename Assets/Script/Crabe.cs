@@ -68,7 +68,7 @@ public class Crabe : MonoBehaviour
             estActif = false;
             crabEvent.GetComponent<crabevent>().Eboulement();
         }
-        //rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
+        rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
     }
     public void AttaqueBulle()
     {
