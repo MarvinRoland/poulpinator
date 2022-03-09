@@ -250,10 +250,7 @@ public class Player : MonoBehaviour
             {
                 isDead = true;
             }            
-            else
-            {
-               
-            }
+           
         }
         if (other.tag == "WallStun")
         {
