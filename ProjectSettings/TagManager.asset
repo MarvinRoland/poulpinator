@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - crabevent
   - Ancre
+  - Crabe
   layers:
   - Default
   - TransparentFX

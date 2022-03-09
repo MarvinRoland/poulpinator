@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject ancreObject;
     [SerializeField] GameObject tentacle;
     [SerializeField] GameObject spikeObject;
+    [SerializeField] GameObject restartBouton;
     bool isDead = false;
     bool isCameraGoFar = false;
     bool isSpike = false;
@@ -79,12 +81,17 @@ public class Player : MonoBehaviour
     void Update()
     {
         //mousePosition = Input.mousePosition;
-        
+
         if (!isDead)
         {
             Rotation();
             Propulsion();
             JetDancre();
+            restartBouton.gameObject.SetActive(false);
+        }
+        else
+        {
+            restartBouton.gameObject.SetActive(true);
         }
         
 
@@ -210,12 +217,22 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
+
+        if (isDead) 
+        {
+            isDead = false;
+            SceneManager.LoadScene("MAP", LoadSceneMode.Single);
+            //this.transform.position = new Vector3(1390, 46, -15) ;
+            //rb.velocity = new Vector3(0,0,-15);
+
+        }
+        else
+        {
+            isDead = true;
+        }
         //play animation mort
         // gameover is on
         // retourne au checkpoint
-        
-        
-        
     }
     private void OnTriggerEnter(Collider other) 
     {
