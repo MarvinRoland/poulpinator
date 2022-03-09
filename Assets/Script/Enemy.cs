@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour
     private Rigidbody rb;
     Vector3 v3Force;
     private bool canPropulse;
+    public bool isChasse;
+    public bool isFlee;
+    public GameObject target;
+    public Vector3 targetPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +25,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        target = GameObject.Find("Player Boddy");
+        targetPosition = GameObject.Find("Player Boddy").transform.position;
+        EnemySetChasse();
+
     }
     public void Propulsion()
     {
@@ -37,5 +44,13 @@ public class Enemy : MonoBehaviour
             
             rb.velocity -= deceleration*rb.velocity* Time.deltaTime;
         }
+    }
+    public void EnemySetChasse()
+    {        
+        if(transform.localScale.magnitude <= target.transform.localScale.magnitude*0.7f)
+        {
+            isChasse = false;
+            isFlee = true;
+        } 
     }
 }

@@ -19,19 +19,21 @@ public class Crabe : MonoBehaviour
     [SerializeField] float bulleTempsEntreChaqueBulle;
     [SerializeField] GameObject bulleObject;
     [SerializeField] float stunTimer;
-
+    [SerializeField] public GameObject crabEvent;
     Vector3 v3Force;
     
     Rigidbody rb;
     private bool isBulleAttaque, isMoove, isChasse, isJump;
     public bool isKnoc = false;
-    private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse, savedTimeJump, savedTimeKnoc;
+    private float savedTimeBulle, savedTimeBulleAttaque, savedTimeMoove, savedTimeChasse, savedTimeJump, savedTimeKnoc, savedTimePv, pvCD;
     private int nbBulle;
     private Vector3 targetPosition, goToPosition;
     private float targetX, targetY, targetZ;
     // Start is called before the first frame update
     void Start()
     {
+        savedTimePv = Time.time;
+        pvCD = 1;
         rb = this.GetComponent<Rigidbody>();
         savedTimeKnoc = Time.time;
         savedTimeBulle = Time.time;
@@ -64,6 +66,7 @@ public class Crabe : MonoBehaviour
         if (crabePointDeVie <= 0)
         {
             estActif = false;
+            crabEvent.GetComponent<crabevent>().Eboulement();
         }
         rb.AddForce(new Vector3(0,-8*Time.deltaTime,0),ForceMode.VelocityChange);
     }
@@ -168,11 +171,12 @@ public class Crabe : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "WallStun")
+        if (other.tag == "WallStun" && savedTimePv + pvCD < Time.time)
         {
             isKnoc = true;
             savedTimeKnoc = Time.time;
             crabePointDeVie -= 1;
+            savedTimePv = Time.time;
         }
     }
 }

@@ -603,6 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4046819438915187534}
+  - component: {fileID: 125300752005836457}
   m_Layer: 0
   m_Name: crabe 1
   m_TagString: Untagged
@@ -639,6 +640,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125300752005836457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702768658982840820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e36ed22ed193074ea70e27b3e69defd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estActif: 0
+  crabePointDeVie: 3
+  crabeSpeed: 10
+  propulsionForce: 40
+  bulleNombreParAttaque: 20
+  bulleMinTaille: 0.7
+  bulleMMaxTaille: 2
+  bulleSpeedMin: 10
+  bulleSpeedMax: 15
+  bulleAngleDirection: 10
+  bulleAttaqueCD: 3
+  mooveCD: 0.01
+  chasseCD: 5
+  jumpCD: 17
+  bulleTempsEntreChaqueBulle: 0.1
+  bulleObject: {fileID: 0}
+  stunTimer: 15
+  isKnoc: 0
 --- !u!1 &4678155840280376729
 GameObject:
   m_ObjectHideFlags: 0

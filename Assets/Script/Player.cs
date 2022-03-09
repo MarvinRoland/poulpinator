@@ -70,20 +70,26 @@ public class Player : MonoBehaviour
         spriteCD = 0.02f;
         gameOver = true;
         nbAncreToSpew = 5;
+        isDead = false;
         //cameraPlayer. = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Input.mousePosition;
+        //mousePosition = Input.mousePosition;
         
+        if (!isDead)
+        {
+            Rotation();
+            Propulsion();
+            JetDancre();
+        }
         
-        Rotation();
-        Propulsion();
+
         CameraSetPosition();
         PlayerSetScale();
-        JetDancre();
+        
         SetPlayerAncre();
         FixNegatifExp();
         rb.angularVelocity -= rb.angularVelocity * Time.deltaTime * 1;
@@ -219,8 +225,11 @@ public class Player : MonoBehaviour
             isCameraGoFar = true;
             isGoBig = true;
             sizeUp = transform.localScale += new Vector3(0.1f,0.1f,0.1f);
-            disCam = cameraDistance += 0.1f;            
-            PlayerUpgrade(other.GetComponent<Bouffe>().isToxicFood, expToAdd, expToRemove);           
+            if (cameraDistance < 30)
+            {
+                disCam = cameraDistance += 0.1f;   
+            }                     
+            PlayerUpgrade(other.GetComponent<Bouffe>().isToxicFood, expToAdd, expToRemove);          
             
         }            
         
@@ -246,7 +255,10 @@ public class Player : MonoBehaviour
                
             }
         }
-
+        if (other.tag == "WallStun")
+        {
+            isDead = true;
+        }
 
         Debug.Log("hit");
     }
